@@ -4,7 +4,6 @@ import (
 	"github.com/cloudfoundry/libbuildpack/bratshelper"
 	"github.com/cloudfoundry/libbuildpack/cutlass"
 	. "github.com/onsi/ginkgo"
-	. "github.com/onsi/gomega"
 )
 
 var _ = Describe("Nodejs buildpack", func() {

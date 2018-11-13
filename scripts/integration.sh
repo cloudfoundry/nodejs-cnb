@@ -9,10 +9,10 @@ GINKGO_NODES=${GINKGO_NODES:-3}
 GINKGO_ATTEMPTS=${GINKGO_ATTEMPTS:-2}
 export CF_STACK=${CF_STACK:-cflinuxfs3}
 
-cd src/*/integration
+cd src/*/v3_integration
 
 echo "Run Uncached Buildpack"
 ginkgo -r --flakeAttempts=$GINKGO_ATTEMPTS -nodes $GINKGO_NODES --slowSpecThreshold=60 -- --cached=false
 
-echo "Run Cached Buildpack"
-ginkgo -r --flakeAttempts=$GINKGO_ATTEMPTS -nodes $GINKGO_NODES --slowSpecThreshold=60 -- --cached
+#echo "Run Cached Buildpack"
+#ginkgo -r --flakeAttempts=$GINKGO_ATTEMPTS -nodes $GINKGO_NODES --slowSpecThreshold=60 -- --cached

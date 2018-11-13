@@ -17,6 +17,15 @@ include_files:
 - bin/finalize
 - bin/release
 - bin/supply
+- bin/v3-detector
+- bin/v3-builder
+- cnbs/org.cloudfoundry.buildpacks.nodejs/0.0.1/buildpack.toml
+- cnbs/org.cloudfoundry.buildpacks.nodejs/0.0.1/bin/detect
+- cnbs/org.cloudfoundry.buildpacks.nodejs/0.0.1/bin/build
+- cnbs/org.cloudfoundry.buildpacks.npm/0.0.1/buildpack.toml
+- cnbs/org.cloudfoundry.buildpacks.npm/0.0.1/bin/detect
+- cnbs/org.cloudfoundry.buildpacks.npm/0.0.1/bin/build
+- order.toml
 - manifest.yml
 - profile/appdynamics-setup.rb
 - profile/newrelic-setup.sh

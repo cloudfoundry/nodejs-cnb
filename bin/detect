@@ -1,9 +1,41 @@
-#!/usr/bin/env bash
+#!/bin/bash
+set -euo pipefail
 
-BP=$(dirname "$(dirname $0)")
-if [ -f "$1/package.json" ]; then
-  echo "node.js "$(cat "$BP/VERSION")""
-  exit 0
-fi
+BUILD_DIR=$1
 
-exit 1
+export BUILDPACK_DIR=`dirname $(readlink -f ${BASH_SOURCE%/*})`
+
+source "$BUILDPACK_DIR/scripts/install_go.sh"
+output_dir=$(mktemp -d -t detectXXX)
+
+cat >$output_dir/order.toml <<EOF
+[[groups]]
+labels = ["nodejs"]
+buildpacks = [
+  { id = "org.cloudfoundry.buildpacks.nodejs", version = '0.0.1' },
+  { id = "org.cloudfoundry.buildpacks.npm", version = '0.0.1' }
+]
+EOF
+
+mkdir -p $output_dir/cnbs/org.cloudfoundry.buildpacks.nodejs/0.0.1
+pushd $output_dir/cnbs/org.cloudfoundry.buildpacks.nodejs/0.0.1
+    wget https://github.com/cloudfoundry/nodejs-cnb/releases/download/v0.0.1-alpha/nodejs-cnb.tgz
+    tar xzvf nodejs-cnb.tgz
+    rm nodejs-cnb.tgz
+popd
+
+mkdir -p $output_dir/cnbs/org.cloudfoundry.buildpacks.npm/0.0.1
+pushd $output_dir/cnbs/org.cloudfoundry.buildpacks.npm/0.0.1
+    wget https://github.com/cloudfoundry/npm-cnb/releases/download/v0.0.1-alpha/npm-cnb.tgz
+    tar xzvf npm-cnb.tgz
+    rm npm-cnb.tgz
+popd
+
+echo "-----> Running go build detect"
+
+pushd $BUILDPACK_DIR
+    GOROOT=$GoInstallDir/go $GoInstallDir/go/bin/go build -ldflags="-s -w" -o $output_dir/bin/v3-detector github.com/buildpack/lifecycle/cmd/detector
+    GOROOT=$GoInstallDir/go $GoInstallDir/go/bin/go build -ldflags="-s -w" -o $output_dir/bin/detect github.com/cloudfoundry/libbuildpack/shims/cmd/detect
+popd
+
+$output_dir/detect "$BUILD_DIR"

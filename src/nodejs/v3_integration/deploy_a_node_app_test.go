@@ -1,10 +1,12 @@
 package integration_test
 
 import (
-	"github.com/cloudfoundry/libbuildpack/cutlass"
 	"os"
 	"os/exec"
 	"path/filepath"
+	"time"
+
+	"github.com/cloudfoundry/libbuildpack/cutlass"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
@@ -27,6 +29,7 @@ var _ = Describe("V3 Wrapped CF NodeJS Buildpack", func() {
 
 			It("resolves to a nodeJS version successfully", func() {
 				Expect(app.Push()).To(Succeed())
+				Eventually(func() ([]string, error) { return app.InstanceStates() }, 120*time.Second).Should(Equal([]string{"RUNNING"}))
 
 				Eventually(app.Stdout.String).Should(MatchRegexp(`.*NodeJS.*8\.\d+\.\d+.*:.*Contributing.* to launch`))
 				Expect(app.GetBody("/")).To(ContainSubstring("Hello World!"))
@@ -54,6 +57,7 @@ var _ = Describe("V3 Wrapped CF NodeJS Buildpack", func() {
 
 			It("runs", func() {
 				Expect(app.Push()).To(Succeed())
+				Eventually(func() ([]string, error) { return app.InstanceStates() }, 120*time.Second).Should(Equal([]string{"RUNNING"}))
 
 				Eventually(app.Stdout.String).Should(MatchRegexp(`.*NodeJS.*8\.\d+\.\d+.*:.*Contributing.* to launch`))
 				Expect(app.GetBody("/")).To(ContainSubstring("Hello World!"))

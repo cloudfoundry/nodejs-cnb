@@ -38,14 +38,9 @@ popd
 echo "-----> Running go build supply"
 
 pushd $BUILDPACK_DIR
-    echo "output dir: $output_dir"
-    echo "step 1"
     GOROOT=$GoInstallDir/go $GoInstallDir/go/bin/go build -ldflags="-s -w" -o $output_dir/bin/supply github.com/cloudfoundry/libbuildpack/shims/cmd/supply
-    echo "step 2"
     GOROOT=$GoInstallDir/go $GoInstallDir/go/bin/go build -ldflags="-s -w" -o $output_dir/bin/v3-detector github.com/buildpack/lifecycle/cmd/detector
-    echo "step 3"
     GOROOT=$GoInstallDir/go $GoInstallDir/go/bin/go build -ldflags="-s -w" -o $output_dir/bin/v3-builder github.com/buildpack/lifecycle/cmd/builder
-    echo "steps completed"
 popd
 
 $output_dir/bin/supply "$BUILD_DIR" "$CACHE_DIR" "$DEPS_DIR" "$DEPS_IDX"

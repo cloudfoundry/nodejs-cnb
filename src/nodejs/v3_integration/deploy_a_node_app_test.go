@@ -16,7 +16,7 @@ var _ = Describe("V3 Wrapped CF NodeJS Buildpack", func() {
 	var app *cutlass.App
 	AfterEach(func() {
 		if app != nil {
-			app.Destroy()
+			//app.Destroy()
 		}
 		app = nil
 	})
@@ -27,7 +27,7 @@ var _ = Describe("V3 Wrapped CF NodeJS Buildpack", func() {
 				app = cutlass.New(filepath.Join(bpDir, "fixtures", "brats"))
 			})
 
-			It("resolves to a nodeJS version successfully", func() {
+			FIt("resolves to a nodeJS version successfully", func() {
 				Expect(app.Push()).To(Succeed())
 				Eventually(func() ([]string, error) { return app.InstanceStates() }, 120*time.Second).Should(Equal([]string{"RUNNING"}))
 

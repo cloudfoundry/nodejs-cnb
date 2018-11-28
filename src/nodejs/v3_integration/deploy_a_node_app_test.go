@@ -1,6 +1,7 @@
 package integration_test
 
 import (
+	"io/ioutil"
 	"os"
 	"os/exec"
 	"path/filepath"
@@ -37,20 +38,30 @@ var _ = Describe("V3 Wrapped CF NodeJS Buildpack", func() {
 		})
 
 		Context("Unbuilt buildpack (eg github)", func() {
-			var (
-				bpName string
-				app    *cutlass.App
-			)
+			var bpName string
+
 			BeforeEach(func() {
+				if cutlass.Cached {
+					Skip("skipping cached buildpack test")
+				}
+
+				tmpDir, err := ioutil.TempDir("", "")
+				Expect(err).NotTo(HaveOccurred())
+				os.RemoveAll(tmpDir)
+
 				bpName = "unbuilt-v3-node"
+				bpZip := filepath.Join(tmpDir, bpName+".zip")
+
 				app = cutlass.New(filepath.Join(bpDir, "fixtures", "brats"))
 				app.Buildpacks = []string{bpName + "_buildpack"}
-				cmd := exec.Command("git", "archive", "-o", filepath.Join("/tmp", bpName+".zip"), "HEAD")
+
+				cmd := exec.Command("git", "archive", "-o", bpZip, "HEAD")
 				cmd.Dir = bpDir
 				Expect(cmd.Run()).To(Succeed())
-				Expect(cutlass.CreateOrUpdateBuildpack(bpName, filepath.Join("/tmp", bpName+".zip"), "")).To(Succeed())
-				Expect(os.Remove(filepath.Join("/tmp", bpName+".zip"))).To(Succeed())
+
+				Expect(cutlass.CreateOrUpdateBuildpack(bpName, bpZip, "")).To(Succeed())
 			})
+
 			AfterEach(func() {
 				Expect(cutlass.DeleteBuildpack(bpName)).To(Succeed())
 			})

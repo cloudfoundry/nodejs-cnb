@@ -13,6 +13,8 @@ github.com/cloudfoundry/libbuildpack v0.0.0-20181109212710-ed5668f34324 h1:b3SPs
 github.com/cloudfoundry/libbuildpack v0.0.0-20181109212710-ed5668f34324/go.mod h1:YCwi0hLymaYgwx8z9YrLbnIzch/2E89mqZkn2IVcpKk=
 github.com/cloudfoundry/libbuildpack v0.0.0-20181112202537-1780c735dd27 h1:xcaHhFOUlhpJl+DZok0nK2ZQIxpdS9xUr+vaK862I3A=
 github.com/cloudfoundry/libbuildpack v0.0.0-20181112202537-1780c735dd27/go.mod h1:YCwi0hLymaYgwx8z9YrLbnIzch/2E89mqZkn2IVcpKk=
+github.com/cloudfoundry/libbuildpack v0.0.0-20181128221744-1145c99db82c h1:S4Dtw8MpE6LGBICi9rLFyNSQcw5cYDVVCtb+ou0jOcw=
+github.com/cloudfoundry/libbuildpack v0.0.0-20181128221744-1145c99db82c/go.mod h1:YCwi0hLymaYgwx8z9YrLbnIzch/2E89mqZkn2IVcpKk=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/docker/distribution v0.0.0-20180327202408-83389a148052 h1:bYklS+YB8BZreSEY+/WqaH+S8upfuYf0Hq/EmNOQMIA=
 github.com/docker/distribution v0.0.0-20180327202408-83389a148052/go.mod h1:J2gT2udsDAN96Uj4KfcMRqY0/ypR+oyYUYmja8H+y+w=

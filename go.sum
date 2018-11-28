@@ -7,8 +7,6 @@ github.com/blang/semver v3.5.1+incompatible h1:cQNTCjp13qL8KC3Nbxr/y2Bqb63oX6wdn
 github.com/blang/semver v3.5.1+incompatible/go.mod h1:kRBLl5iJ+tD4TcOOxsy/0fnwebNt5EWlYSAyrTnjyyk=
 github.com/buildpack/lifecycle v0.0.0-20181031025713-aec58da4a3fa h1:qm3C5gmlZaVrXmsvLqJzPJckB1cVKIwfkrBh6zhsObk=
 github.com/buildpack/lifecycle v0.0.0-20181031025713-aec58da4a3fa/go.mod h1:rmQIWPE7ORJsSn/gHoT5fQAbsK7zV0X9yttd0cuGv5M=
-github.com/buildpack/lifecycle v0.0.0-20181108201612-b2745f1867ae h1:8CmcTDs9wECJ1wYMdTuW0r6m/6qbMZTNX2BitpxBR1w=
-github.com/buildpack/lifecycle v0.0.0-20181108201612-b2745f1867ae/go.mod h1:rmQIWPE7ORJsSn/gHoT5fQAbsK7zV0X9yttd0cuGv5M=
 github.com/cloudfoundry/libbuildpack v0.0.0-20181102183835-772a83a22345 h1:RFj6K5oNWlJyKUEIXV/2AYdQLHgLJ62coe//lyt9YK0=
 github.com/cloudfoundry/libbuildpack v0.0.0-20181102183835-772a83a22345/go.mod h1:YCwi0hLymaYgwx8z9YrLbnIzch/2E89mqZkn2IVcpKk=
 github.com/cloudfoundry/libbuildpack v0.0.0-20181109212710-ed5668f34324 h1:b3SPs8+Fe3Ux1nuqXuPCK+yubPOGUmoMfJCJloJsY04=

@@ -2,12 +2,12 @@
 set -euo pipefail
 
 GO_VERSION="1.11.2"
+GO_SHA256="1dfe664fa3d8ad714bbd15a36627992effd150ddabd7523931f077b3926d736d"
 
 export GoInstallDir="/tmp/go$GO_VERSION"
 mkdir -p $GoInstallDir
 
 if [ ! -f $GoInstallDir/go/bin/go ]; then
-  GO_SHA256="1dfe664fa3d8ad714bbd15a36627992effd150ddabd7523931f077b3926d736d"
   URL=https://dl.google.com/go/go${GO_VERSION}.linux-amd64.tar.gz
 
   echo "-----> Download go ${GO_VERSION}"
@@ -23,7 +23,12 @@ if [ ! -f $GoInstallDir/go/bin/go ]; then
   tar xzf /tmp/go.tar.gz -C $GoInstallDir
   rm /tmp/go.tar.gz
 fi
+
 if [ ! -f $GoInstallDir/go/bin/go ]; then
   echo "       **ERROR** Could not download go"
   exit 1
 fi
+
+pushd "$( dirname "${BASH_SOURCE[0]}" )/.."
+    GOROOT=$GoInstallDir/go $GoInstallDir/go/bin/go mod download
+popd

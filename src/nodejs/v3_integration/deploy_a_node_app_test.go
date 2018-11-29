@@ -47,7 +47,7 @@ var _ = Describe("V3 Wrapped CF NodeJS Buildpack", func() {
 
 				tmpDir, err := ioutil.TempDir("", "")
 				Expect(err).NotTo(HaveOccurred())
-				os.RemoveAll(tmpDir)
+				defer os.RemoveAll(tmpDir)
 
 				bpName = "unbuilt-v3-node"
 				bpZip := filepath.Join(tmpDir, bpName+".zip")
@@ -56,6 +56,8 @@ var _ = Describe("V3 Wrapped CF NodeJS Buildpack", func() {
 				app.Buildpacks = []string{bpName + "_buildpack"}
 
 				cmd := exec.Command("git", "archive", "-o", bpZip, "HEAD")
+				cmd.Stdout = os.Stdout
+				cmd.Stderr = os.Stderr
 				cmd.Dir = bpDir
 				Expect(cmd.Run()).To(Succeed())
 

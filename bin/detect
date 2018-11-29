@@ -8,6 +8,8 @@ source "$BUILDPACK_DIR/scripts/install_go.sh"
 output_dir=$(mktemp -d -t detectXXX)
 
 echo "-----> Running go build detect"
-GOOS=linux GOROOT=$GoInstallDir/go $GoInstallDir/go/bin/go build -ldflags="-s -w" -o $output_dir/detect github.com/cloudfoundry/libbuildpack/shims/cmd/detect
+pushd $BUILDPACK_DIR
+    $GoInstallDir/go/bin/go build -ldflags="-s -w" -o $output_dir/detect github.com/cloudfoundry/libbuildpack/shims/cmd/detect
+popd
 
 $output_dir/detect "$BUILD_DIR"

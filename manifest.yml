@@ -27,11 +27,12 @@ dependencies:
   source: https://github.com/cloudfoundry/nodejs-cnb/releases/download/v0.0.1-alpha/nodejs-cnb.tgz
 - name: org.cloudfoundry.buildpacks.npm
   version: 0.0.1-alpha
-  uri: https://github.com/cloudfoundry/npm-cnb/releases/download/v0.0.1-alpha/npm-cnb.tgz
+  uri: https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.buildpacks.npm/org.cloudfoundry.buildpacks.npm-0.0.1-alpha-any-stack-d08dd25e.tgz
   sha256: d08dd25e6c891dfac5987e3454e6bea37a9b3bd2b8d35916b9a2d8f4ca9be4d3
   cf_stacks:
   - cflinuxfs2
   - cflinuxfs3
+  source: https://github.com/cloudfoundry/npm-cnb/releases/download/v0.0.1-alpha/npm-cnb.tgz
 - name: v3-builder
   version: 1.0.0
   uri: http://lifecycle.limit.buildpacks-gcp.ci.cf-app.com/v3-builder.tgz

@@ -34,22 +34,22 @@ dependencies:
   - cflinuxfs3
   source: https://github.com/cloudfoundry/npm-cnb/releases/download/0.0.1/npm-cnb.tgz
 - name: v3-builder
-  version: 1.0.0
-  uri: http://lifecycle.limit.buildpacks-gcp.ci.cf-app.com/v3-builder.tgz
+  version: 0.0.1
+  uri: https://buildpacks.cloudfoundry.org/dependencies/v3-builder/v3-builder-58d2cc24.tgz
   sha256: 58d2cc241ce2147382cb7c2539a98ec9db646d719e64eb55ccf3aa6e7e3f69b4
   cf_stacks:
   - cflinuxfs2
   - cflinuxfs3
 - name: v3-detector
-  version: 1.0.0
-  uri: http://lifecycle.limit.buildpacks-gcp.ci.cf-app.com/v3-detector.tgz
+  version: 0.0.1
+  uri: https://buildpacks.cloudfoundry.org/dependencies/v3-detector/v3-detector-d74d5202.tgz
   sha256: d74d5202c68367da98128710c3e812941cf9a90a64edaab40ae779c16ffea8b3
   cf_stacks:
   - cflinuxfs2
   - cflinuxfs3
 - name: v3-launcher
-  version: 1.0.0
-  uri: http://lifecycle.limit.buildpacks-gcp.ci.cf-app.com/v3-launcher.tgz
+  version: 0.0.1
+  uri: https://buildpacks.cloudfoundry.org/dependencies/v3-launcher/v3-launcher-b4493969.tgz
   sha256: b44939691325cc7b9be251f9737d09a503e963e8dcc305a377e17f909e313161
   cf_stacks:
   - cflinuxfs2

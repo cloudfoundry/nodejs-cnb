@@ -1,1 +1,0 @@
-web: figlet "Hello World" && node server.js

@@ -1,0 +1,21 @@
+{
+  "name": "simple_app",
+  "version": "0.0.0",
+  "description": "hello, world",
+  "main": "server.js",
+  "engines": {
+    "node": "8.x"
+  },
+  "scripts": {
+    "postinstall": "dotnet --version > text_1.txt"
+  },
+  "dependencies": {
+    "logfmt": "~1.1.2"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/cloudfoundry/nodejs-buildpack.git"
+  }
+}

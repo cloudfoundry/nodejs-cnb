@@ -10,16 +10,6 @@ GINKGO_ATTEMPTS=${GINKGO_ATTEMPTS:-2}
 export CF_STACK=${CF_STACK:-cflinuxfs3}
 
 pushd src/*/v3_integration
-
     echo "Run Uncached Shim Buildpack"
     ginkgo -r --flakeAttempts=$GINKGO_ATTEMPTS -nodes $GINKGO_NODES --slowSpecThreshold=60 -- --cached=false
-
 popd
-
-pushd src/*/integration
-    # echo "Run Uncached Buildpack"
-    # ginkgo -r --flakeAttempts=$GINKGO_ATTEMPTS -nodes $GINKGO_NODES --slowSpecThreshold=60 -- --cached=false
-
-    # echo "Run Cached Buildpack"
-    # ginkgo -r --flakeAttempts=$GINKGO_ATTEMPTS -nodes $GINKGO_NODES --slowSpecThreshold=60 -- --cached
- popd

@@ -1,8 +1,8 @@
 #!/bin/bash
 set -euo pipefail
 
-GO_VERSION="1.11.2"
-GO_SHA256="1dfe664fa3d8ad714bbd15a36627992effd150ddabd7523931f077b3926d736d"
+GO_VERSION="1.11.4"
+GO_SHA256="fb26c30e6a04ad937bbc657a1b5bba92f80096af1e8ee6da6430c045a8db3a5b"
 
 export GoInstallDir="/tmp/go$GO_VERSION"
 mkdir -p $GoInstallDir

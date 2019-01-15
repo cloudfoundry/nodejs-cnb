@@ -38,7 +38,7 @@ var _ = Describe("V3 Wrapped CF NodeJS Buildpack", func() {
 			})
 		})
 
-		XContext("Unbuilt buildpack (eg github)", func() {
+		Context("Unbuilt buildpack (eg github)", func() {
 			var bpName string
 
 			BeforeEach(func() {
@@ -110,6 +110,16 @@ var _ = Describe("V3 Wrapped CF NodeJS Buildpack", func() {
 			}
 			Expect(app.Push()).NotTo(Succeed())
 			Expect(app.Stdout.String()).To(ContainSubstring("ERROR: You are running a V2 buildpack after a V3 buildpack. This is unsupported."))
+			Expect(app.Stdout.String()).NotTo(ContainSubstring("ERR bash: npm: command not found"))
+		})
+
+		It("throws an error when a v3 buildpack is followed by an older v2 buildpack that does not respect the sentinal file", func() {
+			app.StartCommand = "npm start"
+			app.Buildpacks = []string{
+				"nodejs_buildpack",
+				"https://github.com/cloudfoundry/binary-buildpack#v1.0.13",
+			}
+			Expect(app.Push()).NotTo(Succeed())
 			Expect(app.Stdout.String()).NotTo(ContainSubstring("ERR bash: npm: command not found"))
 		})
 

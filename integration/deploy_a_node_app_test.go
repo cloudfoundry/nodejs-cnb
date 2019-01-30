@@ -25,7 +25,7 @@ var _ = Describe("V3 Wrapped CF NodeJS Buildpack", func() {
 	Describe("nodeJS versions", func() {
 		Context("when specifying a range for the nodeJS version in the package.json", func() {
 			BeforeEach(func() {
-				app = cutlass.New(filepath.Join(bpDir, "fixtures", "simple_app"))
+				app = cutlass.New(filepath.Join(bpDir, "integration", "testdata", "simple_app"))
 			})
 
 			It("resolves to a nodeJS version successfully", func() {
@@ -53,7 +53,7 @@ var _ = Describe("V3 Wrapped CF NodeJS Buildpack", func() {
 				bpName = "unbuilt-v3-node"
 				bpZip := filepath.Join(tmpDir, bpName+".zip")
 
-				app = cutlass.New(filepath.Join(bpDir, "fixtures", "simple_app"))
+				app = cutlass.New(filepath.Join(bpDir, "integration", "testdata", "simple_app"))
 				app.Buildpacks = []string{bpName + "_buildpack"}
 
 				cmd := exec.Command("git", "archive", "-o", bpZip, "HEAD")
@@ -85,7 +85,7 @@ var _ = Describe("V3 Wrapped CF NodeJS Buildpack", func() {
 				Skip("API version does not have multi-buildpack support")
 			}
 
-			app = cutlass.New(filepath.Join(bpDir, "fixtures", "v2_supplies_dotnet"))
+			app = cutlass.New(filepath.Join(bpDir, "integration", "testdata", "v2_supplies_dotnet"))
 			app.Disk = "2G"
 			app.Memory = "2G"
 		})

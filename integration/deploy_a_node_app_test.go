@@ -32,8 +32,8 @@ var _ = Describe("V3 Wrapped CF NodeJS Buildpack", func() {
 				Expect(app.Push()).To(Succeed())
 				Eventually(func() ([]string, error) { return app.InstanceStates() }, 120*time.Second).Should(Equal([]string{"RUNNING"}))
 
-				Eventually(app.Stdout.String).Should(MatchRegexp(`.*NodeJS.*8\.\d+\.\d+.*:.*Contributing.*`))
-				Eventually(app.Stdout.String).Should(MatchRegexp("Installing node_modules"))
+				Eventually(app.Stdout.ANSIStrippedString).Should(MatchRegexp(`NodeJS \d+\.\d+\.\d+: Contributing`))
+				Eventually(app.Stdout.ANSIStrippedString).Should(ContainSubstring("Installing node_modules"))
 				Expect(app.GetBody("/")).To(ContainSubstring("Hello World!"))
 			})
 		})
@@ -73,21 +73,21 @@ var _ = Describe("V3 Wrapped CF NodeJS Buildpack", func() {
 				Expect(app.Push()).To(Succeed())
 				Eventually(func() ([]string, error) { return app.InstanceStates() }, 120*time.Second).Should(Equal([]string{"RUNNING"}))
 
-				Eventually(app.Stdout.String).Should(MatchRegexp(`.*NodeJS.*8\.\d+\.\d+.*:.*Contributing.*`))
+				Eventually(app.Stdout.ANSIStrippedString).Should(MatchRegexp(`NodeJS \d+\.\d+\.\d+: Contributing`))
 				Expect(app.GetBody("/")).To(ContainSubstring("Hello World!"))
 			})
 		})
 	})
 
-	Context("multiple buildpacks", func() {
+	Context("multiple buildpacks with v2 and v3 buildpacks", func() {
 		BeforeEach(func() {
 			if ok, err := cutlass.ApiGreaterThan("2.65.1"); err != nil || !ok {
 				Skip("API version does not have multi-buildpack support")
 			}
 
 			app = cutlass.New(filepath.Join(bpDir, "integration", "testdata", "v2_supplies_dotnet"))
-			app.Disk = "2G"
-			app.Memory = "2G"
+			app.Disk = "1G"
+			app.Memory = "1G"
 		})
 
 		It("makes the supplied v2 dependency available at v3 launch and build", func() {
@@ -113,7 +113,7 @@ var _ = Describe("V3 Wrapped CF NodeJS Buildpack", func() {
 			Expect(app.Stdout.String()).NotTo(ContainSubstring("ERR bash: npm: command not found"))
 		})
 
-		It("throws an error when a v3 buildpack is followed by an older v2 buildpack that does not respect the sentinal file", func() {
+		It("throws an error when a v3 buildpack is followed by an older v2 buildpack that does not respect the sentinel file", func() {
 			app.StartCommand = "npm start"
 			app.Buildpacks = []string{
 				"nodejs_buildpack",

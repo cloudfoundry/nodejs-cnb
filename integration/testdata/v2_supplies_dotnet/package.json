@@ -7,7 +7,7 @@
     "node": "8.x"
   },
   "scripts": {
-    "postinstall": "dotnet --version > text_1.txt"
+    "postinstall": "dotnet --version > /home/vcap/app/text_1.txt"
   },
   "dependencies": {
     "logfmt": "~1.1.2"

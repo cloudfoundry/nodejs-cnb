@@ -27,13 +27,14 @@ dependencies:
   source: https://github.com/cloudfoundry/nodejs-cnb/releases/download/v0.0.4/nodejs-cnb-0.0.4.tgz
   source_sha256: 2c85f3bd8b5e1fc4da91650c0e5ae528e20ddd2ab0d068ed54370ca56c2bc24c
 - name: org.cloudfoundry.buildpacks.npm
-  version: 0.0.3
-  uri: https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.buildpacks.npm/org.cloudfoundry.buildpacks.npm-0.0.3-any-stack-644b06a0.tgz
-  sha256: 644b06a0a5094ce3bee87b8c65fbe58c39bb4123a7e51da95ade105620490201
+  version: 0.0.4
+  uri: https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.buildpacks.npm/org.cloudfoundry.buildpacks.npm-0.0.4-any-stack-5f61ea32.tgz
+  sha256: 5f61ea32ae8c32a3b7d21d37c8ee9ef1a2adc337c96a77c33600af01564dd28e
   cf_stacks:
   - cflinuxfs2
   - cflinuxfs3
-  source: https://github.com/cloudfoundry/npm-cnb/releases/download/v0.0.3/npm-cnb.tgz
+  source: https://github.com/cloudfoundry/npm-cnb/releases/download/v0.0.4/npm-cnb-0.0.4.tgz
+  source_sha256: 5f61ea32ae8c32a3b7d21d37c8ee9ef1a2adc337c96a77c33600af01564dd28e
 - name: v3-builder
   version: 0.0.2
   uri: https://buildpacks.cloudfoundry.org/dependencies/v3-builder/v3-builder-00b2a143-56e4f99a.tgz

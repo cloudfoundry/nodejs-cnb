@@ -18,14 +18,14 @@ include_files:
 - manifest.yml
 dependencies:
 - name: org.cloudfoundry.buildpacks.nodejs
-  version: 0.0.5
-  uri: https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.buildpacks.nodejs/org.cloudfoundry.buildpacks.nodejs-0.0.5-any-stack-6a276781.tgz
-  sha256: 6a2767810e8c66b8c522bf744b0ae81e5c00b249a0f9974a000b7ae50d76adee
+  version: 0.0.6
+  uri: https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.buildpacks.nodejs/org.cloudfoundry.buildpacks.nodejs-0.0.6-any-stack-4d8d251e.tgz
+  sha256: 4d8d251eac11c54c82ec2722ecb9721db22d933620529f57ffe4d1e2e4e4ce20
   cf_stacks:
   - cflinuxfs2
   - cflinuxfs3
-  source: https://github.com/cloudfoundry/nodejs-cnb/releases/download/v0.0.5/nodejs-cnb-0.0.5.tgz
-  source_sha256: 6a2767810e8c66b8c522bf744b0ae81e5c00b249a0f9974a000b7ae50d76adee
+  source: https://github.com/cloudfoundry/nodejs-cnb/releases/download/v0.0.6/nodejs-cnb-0.0.6.tgz
+  source_sha256: 4d8d251eac11c54c82ec2722ecb9721db22d933620529f57ffe4d1e2e4e4ce20
 - name: org.cloudfoundry.buildpacks.npm
   version: 0.0.4
   uri: https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.buildpacks.npm/org.cloudfoundry.buildpacks.npm-0.0.4-any-stack-5f61ea32.tgz

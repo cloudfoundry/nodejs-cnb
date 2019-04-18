@@ -8,8 +8,8 @@ output_dir=$(mktemp -d -t detectXXX)
 
 echo "-----> Running Shim Detect"
 
-version=$(cat "$BUILDPACK_DIR/SHIM_VERSION")
-wget -O "$output_dir/shim-bundle-$version.tgz" "https://buildpacks.cloudfoundry.org/dependencies/shim-bundle/shim-bundle-$version.tgz" &>/dev/null
-tar xvf "$output_dir/shim-bundle-$version.tgz" -C "$output_dir" &>/dev/null
+url=$(cat "$BUILDPACK_DIR/SHIM_URL")
+wget -O "$output_dir/shim-bundle.tgz" "$url" &>/dev/null
+tar xvf "$output_dir/shim-bundle.tgz" -C "$output_dir" &>/dev/null
 
 $output_dir/detect "$BUILD_DIR"

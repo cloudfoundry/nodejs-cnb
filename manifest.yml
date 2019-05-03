@@ -42,7 +42,7 @@ dependencies:
   cf_stacks:
   - cflinuxfs2
   - cflinuxfs3
-  source: https://github.com/cloudfoundry/npm-cnb/releases/download/v0.0.7/npm-cnb-0.0.7.tgz
-  source_sha256: 60a7a2f8ad6e1a0a8a1fe0b546cf5e038f5da8a908ef15401a57e644015bd5c8
+  source: https://github.com/cloudfoundry/npm-cnb/archive/v0.0.7.tar.gz
+  source_sha256: 12aff798caf9ebd79e21676cd809a01c22df79cbefcaacb90457b7ba27897786
 pre_package: scripts/build.sh
 default_versions: []

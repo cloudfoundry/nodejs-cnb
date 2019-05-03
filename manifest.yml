@@ -28,13 +28,13 @@ dependencies:
   source_sha256: 83d0ed3e6ab17de71623ce6413ee95468e2d3d584d0afaa2182995949bcf669d
 - name: org.cloudfoundry.buildpacks.nodejs
   version: 0.0.8
-  uri: https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.buildpacks.nodejs/org.cloudfoundry.buildpacks.nodejs-0.0.8-any-stack-b75d0983.tgz
+  uri: https://buildpacks.cloudfoundry.org/dependencies/nodejs-cnb/org.cloudfoundry.buildpacks.nodejs-0.0.8-any-stack-b75d0983.tgz
   sha256: b75d0983831fc10e55076d7c2a7aa52b0131964c48eaa8de5d19d30a3e2b1abb
   cf_stacks:
   - cflinuxfs2
   - cflinuxfs3
-  source: https://github.com/cloudfoundry/nodejs-cnb/releases/download/v0.0.8/nodejs-cnb-0.0.8.tgz
-  source_sha256: b75d0983831fc10e55076d7c2a7aa52b0131964c48eaa8de5d19d30a3e2b1abb
+  source: https://github.com/cloudfoundry/nodejs-cnb/archive/v0.0.8.tar.gz
+  source_sha256: 6d1a5d98792acc2f07705abec5a63674577c5659aea7e3621dc20ea8d10456cd
 - name: org.cloudfoundry.buildpacks.npm
   version: 0.0.7
   uri: https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.buildpacks.npm/org.cloudfoundry.buildpacks.npm-0.0.7-any-stack-60a7a2f8.tgz

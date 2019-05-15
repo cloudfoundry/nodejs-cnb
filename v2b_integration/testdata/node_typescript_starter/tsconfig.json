@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+      "target": "es6",
+      "module": "CommonJS",
+      "moduleResolution": "node",
+      "outDir":"distJs",
+      "sourceMap": true,
+      "removeComments": false,
+      "noEmitOnError": true,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "typeRoots" : ["node_modules/@types", "typings"],
+
+      "allowJs": true,
+      "checkJs": true,
+      "strict": false, 
+      "noImplicitAny": false,
+      "noImplicitThis": true,
+      "noImplicitReturns": true,
+      "noFallthroughCasesInSwitch": true
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+      "node_modules",
+      "distJs",
+      "**/*.spec.ts"
+    ]
+  }

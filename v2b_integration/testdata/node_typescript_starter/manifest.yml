@@ -1,0 +1,13 @@
+---
+applications:
+- name: node_typescript_starter
+  instances: 1
+  memory: 256M
+  disk_quota: 256M
+  buildpack: https://github.com/cloudfoundry/nodejs-buildpack
+  health-check-type: process
+  no-route: true
+  env: 
+    OPTIMIZE_MEMORY: true
+
+

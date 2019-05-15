@@ -9,11 +9,16 @@
   "author": "",
   "license": "BSD-2-Clause",
   "dependencies": {
-    "express": "~4.15.2",
-    "logfmt": "~1.2.0",
-    "newrelic": "latest"
+    "logfmt": "~1.1.2",
+    "express": "~4.0.0"
   },
-  "engines": {
-    "node": "~>6"
+  "engines" : {
+    "node" : "~>8"
+  },
+
+  "repository" :
+  {
+    "type" : "git",
+    "url" : "http://github.com/cloudfoundry/nodejs-buildpack.git"
   }
 }

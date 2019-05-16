@@ -53,5 +53,14 @@ dependencies:
   - cflinuxfs3
   source: https://github.com/cloudfoundry/nodejs-cnb/archive/v0.0.10.tar.gz
   source_sha256: 5746660514b63e13c195895f0b103eb53e775278ac0dbbe250fdabcd18ddc466
+- name: org.cloudfoundry.npm
+  version: 0.0.8
+  uri: https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.npm/org.cloudfoundry.npm-0.0.8-any-stack-2061a28b.tgz
+  sha256: 2061a28b4800cff714c551b49a0379460144d1493d9f98914e66533fc6834bd0
+  cf_stacks:
+  - cflinuxfs2
+  - cflinuxfs3
+  source: https://github.com/cloudfoundry/npm-cnb/archive/v0.0.8.tar.gz
+  source_sha256: d1cb92853cf317a6c96c29e208e0ccecc9c352331269e6b0f5054d44df98d70c
 pre_package: scripts/build.sh
 default_versions: []

@@ -1,4 +1,4 @@
-package v2b_integration_test
+package integration_test
 
 import (
 	"path/filepath"
@@ -20,7 +20,7 @@ var _ = Describe("Node.js applications with unmet dependencies", func() {
 
 	Context("package manager is npm", func() {
 		BeforeEach(func() {
-			app = cutlass.New(filepath.Join("testdata", "unmet_dep_npm"))
+			app = cutlass.New(filepath.Join(bpDir, "v2b_integration", "testdata", "unmet_dep_npm"))
 		})
 
 		It("warns that unmet dependencies may cause issues", func() {
@@ -29,9 +29,9 @@ var _ = Describe("Node.js applications with unmet dependencies", func() {
 		})
 	})
 
-	XContext("package manager is yarn", func() {
+	Context("package manager is yarn", func() {
 		BeforeEach(func() {
-			app = cutlass.New(filepath.Join("testdata", "unmet_dep_yarn"))
+			app = cutlass.New(filepath.Join(bpDir, "v2b_integration", "testdata", "unmet_dep_yarn"))
 		})
 
 		It("warns that unmet dependencies may cause issues", func() {

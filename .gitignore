@@ -1,6 +1,7 @@
 .anvil
 .DS_Store
 .idea
+itf.Dockerfile*
 /tmp
 /log/
 /nodejs_buildpack-*.zip

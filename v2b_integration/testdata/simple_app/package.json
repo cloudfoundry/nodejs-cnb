@@ -8,12 +8,11 @@
   },
   "author": "",
   "license": "BSD-2-Clause",
-  "repository" :
-  {
-    "type" : "git",
-    "url" : "http://github.com/cloudfoundry/nodejs-buildpack.git"
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/cloudfoundry/nodejs-buildpack.git"
   },
   "engines": {
-    "node": "~10"
+    "node": "~12"
   }
 }

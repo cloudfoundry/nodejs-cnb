@@ -1,4 +1,4 @@
-package v2b_integration_test
+package integration_test
 
 import (
 	"path/filepath"
@@ -24,7 +24,7 @@ var _ = Describe("running supply buildpacks before the nodejs buildpack", func()
 				Skip("API version does not have multi-buildpack support")
 			}
 
-			app = cutlass.New(filepath.Join("testdata", "fake_supply_nodejs_app"))
+			app = cutlass.New(filepath.Join(bpDir, "v2b_integration", "testdata", "fake_supply_nodejs_app"))
 			app.Buildpacks = []string{
 				"https://github.com/cloudfoundry/dotnet-core-buildpack#master",
 				"nodejs_buildpack",

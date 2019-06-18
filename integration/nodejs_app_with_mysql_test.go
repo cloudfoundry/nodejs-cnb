@@ -19,7 +19,7 @@ var _ = Describe("CF NodeJS Buildpack", func() {
 
 	Context("deploying a Node.js app with mysql", func() {
 		BeforeEach(func() {
-			app = cutlass.New(filepath.Join(bpDir, "v2b_integration", "testdata", "with_mysql"))
+			app = cutlass.New(filepath.Join(bpDir, "integration", "testdata", "with_mysql"))
 		})
 
 		It("should push the app with mysql successfully", func() {

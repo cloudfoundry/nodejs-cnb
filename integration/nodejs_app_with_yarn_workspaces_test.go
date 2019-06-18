@@ -20,7 +20,7 @@ var _ = Describe("CF NodeJS Buildpack", func() {
 	})
 	Context("deploying a Node.js app that uses yarn workspaces", func() {
 		BeforeEach(func() {
-			app = cutlass.New(filepath.Join(bpDir, "v2b_integration", "testdata", "yarn_with_workspaces"))
+			app = cutlass.New(filepath.Join(bpDir, "integration", "testdata", "yarn_with_workspaces"))
 		})
 
 		It("outputs config contents when queried", func() {

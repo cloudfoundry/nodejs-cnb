@@ -30,7 +30,7 @@ var _ = Describe("CF NodeJS Buildpack", func() {
 	Describe("nodeJS versions", func() {
 		Context("when specifying a range for the nodeJS version in the package.json", func() {
 			BeforeEach(func() {
-				app = cutlass.New(filepath.Join(bpDir, "v2b_integration", "testdata", "node_version_range"))
+				app = cutlass.New(filepath.Join(bpDir, "integration", "testdata", "node_version_range"))
 			})
 
 			It("resolves to a nodeJS version successfully", func() {
@@ -57,7 +57,7 @@ var _ = Describe("CF NodeJS Buildpack", func() {
 
 		Context("when not specifying a nodeJS version in the package.json", func() {
 			BeforeEach(func() {
-				app = cutlass.New(filepath.Join(bpDir, "v2b_integration", "testdata", "without_node_version"))
+				app = cutlass.New(filepath.Join(bpDir, "integration", "testdata", "without_node_version"))
 			})
 
 			It("resolves to the stable nodeJS version successfully", func() {
@@ -70,7 +70,7 @@ var _ = Describe("CF NodeJS Buildpack", func() {
 
 		Context("with an unreleased nodejs version", func() {
 			BeforeEach(func() {
-				app = cutlass.New(filepath.Join(bpDir, "v2b_integration", "testdata", "unreleased_node_version"))
+				app = cutlass.New(filepath.Join(bpDir, "integration", "testdata", "unreleased_node_version"))
 			})
 
 			It("displays a nice error message and gracefully fails", func() {
@@ -83,7 +83,7 @@ var _ = Describe("CF NodeJS Buildpack", func() {
 
 		Context("with an unsupported, but released, nodejs version", func() {
 			BeforeEach(func() {
-				app = cutlass.New(filepath.Join(bpDir, "v2b_integration", "testdata", "unsupported_node_version"))
+				app = cutlass.New(filepath.Join(bpDir, "integration", "testdata", "unsupported_node_version"))
 			})
 
 			It("displays a nice error messages and gracefully fails", func() {
@@ -97,7 +97,7 @@ var _ = Describe("CF NodeJS Buildpack", func() {
 
 	Context("with no Procfile and OPTIMIZE_MEMORY=true", func() {
 		BeforeEach(func() {
-			app = cutlass.New(filepath.Join(bpDir, "v2b_integration", "testdata", "simple_app"))
+			app = cutlass.New(filepath.Join(bpDir, "integration", "testdata", "simple_app"))
 			app.SetEnv("OPTIMIZE_MEMORY", "true")
 		})
 
@@ -110,7 +110,7 @@ var _ = Describe("CF NodeJS Buildpack", func() {
 
 	Context("with no Procfile and OPTIMIZE_MEMORY is unset", func() {
 		BeforeEach(func() {
-			app = cutlass.New(filepath.Join(bpDir, "v2b_integration", "testdata", "simple_app"))
+			app = cutlass.New(filepath.Join(bpDir, "integration", "testdata", "simple_app"))
 		})
 
 		It("is not running with autosized max_old_space_size", func() {
@@ -121,7 +121,7 @@ var _ = Describe("CF NodeJS Buildpack", func() {
 
 		Context("a nvmrc file that takes precedence over package.json", func() {
 			BeforeEach(func() {
-				app = cutlass.New(filepath.Join(bpDir, "v2b_integration", "testdata", "simple_app_with_nvmrc"))
+				app = cutlass.New(filepath.Join(bpDir, "integration", "testdata", "simple_app_with_nvmrc"))
 			})
 
 			It("deploys", func() {
@@ -135,7 +135,7 @@ var _ = Describe("CF NodeJS Buildpack", func() {
 	Describe("Vendored Dependencies", func() {
 		Context("with an app that has vendored dependencies", func() {
 			It("deploys", func() {
-				app = cutlass.New(filepath.Join(bpDir, "v2b_integration", "testdata", "vendored_dependencies"))
+				app = cutlass.New(filepath.Join(bpDir, "integration", "testdata", "vendored_dependencies"))
 				PushAppAndConfirm(app)
 				Expect(app.Stdout.ANSIStrippedString()).To(ContainSubstring("Rebuilding node_modules"))
 
@@ -162,7 +162,7 @@ var _ = Describe("CF NodeJS Buildpack", func() {
 				}
 			})
 
-			AssertNoInternetTraffic(filepath.Join(bpDir, "v2b_integration", "testdata", "vendored_dependencies"))
+			AssertNoInternetTraffic(filepath.Join(bpDir, "integration", "testdata", "vendored_dependencies"))
 		})
 
 		Context("Vendored Depencencies with node module binaries", func() {
@@ -173,14 +173,14 @@ var _ = Describe("CF NodeJS Buildpack", func() {
 			})
 
 			It("deploys", func() {
-				app = cutlass.New(filepath.Join(bpDir, "v2b_integration", "testdata", "vendored_dependencies_with_binaries"))
+				app = cutlass.New(filepath.Join(bpDir, "integration", "testdata", "vendored_dependencies_with_binaries"))
 				PushAppAndConfirm(app)
 			})
 		})
 
 		Context("with an app with a yarn.lock and vendored dependencies", func() {
 			BeforeEach(func() {
-				app = cutlass.New(filepath.Join(bpDir, "v2b_integration", "testdata", "with_yarn_vendored"))
+				app = cutlass.New(filepath.Join(bpDir, "integration", "testdata", "with_yarn_vendored"))
 				if !cutlass.Cached {
 					Skip("offline requires vendored dependencies")
 				}
@@ -194,11 +194,11 @@ var _ = Describe("CF NodeJS Buildpack", func() {
 				Expect(app.GetBody("/microtime")).To(MatchRegexp("native time: \\d+\\.\\d+"))
 			})
 
-			AssertNoInternetTraffic(filepath.Join(bpDir, "v2b_integration", "testdata", "with_yarn_vendored"))
+			AssertNoInternetTraffic(filepath.Join(bpDir, "integration", "testdata", "with_yarn_vendored"))
 		})
 		Context("with an incomplete node_modules directory", func() {
 			BeforeEach(func() {
-				app = cutlass.New(filepath.Join(bpDir, "v2b_integration", "testdata", "incomplete_node_modules"))
+				app = cutlass.New(filepath.Join(bpDir, "integration", "testdata", "incomplete_node_modules"))
 			})
 
 			It("downloads missing dependencies from package.json", func() {
@@ -209,7 +209,7 @@ var _ = Describe("CF NodeJS Buildpack", func() {
 		})
 		Context("with an incomplete package.json", func() {
 			BeforeEach(func() {
-				app = cutlass.New(filepath.Join(bpDir, "v2b_integration", "testdata", "incomplete_package_json"))
+				app = cutlass.New(filepath.Join(bpDir, "integration", "testdata", "incomplete_package_json"))
 			})
 
 			It("does not overwrite the vendored modules not listed in package.json", func() {
@@ -224,7 +224,7 @@ var _ = Describe("CF NodeJS Buildpack", func() {
 	Describe("No Vendored Dependencies", func() {
 		Context("with an app with no vendored dependencies", func() {
 			BeforeEach(func() {
-				app = cutlass.New(filepath.Join(bpDir, "v2b_integration", "testdata", "no_vendored_dependencies"))
+				app = cutlass.New(filepath.Join(bpDir, "integration", "testdata", "no_vendored_dependencies"))
 			})
 
 			It("successfully deploys and vendors the dependencies", func() {
@@ -240,11 +240,11 @@ var _ = Describe("CF NodeJS Buildpack", func() {
 				})
 			})
 
-			AssertUsesProxyDuringStagingIfPresent(filepath.Join(bpDir, "v2b_integration", "testdata", "no_vendored_dependencies"))
+			AssertUsesProxyDuringStagingIfPresent(filepath.Join(bpDir, "integration", "testdata", "no_vendored_dependencies"))
 		})
 		Context("with an app with a yarn.lock file", func() {
 			BeforeEach(func() {
-				app = cutlass.New(filepath.Join(bpDir, "v2b_integration", "testdata", "with_yarn"))
+				app = cutlass.New(filepath.Join(bpDir, "integration", "testdata", "with_yarn"))
 			})
 
 			It("successfully deploys and vendors the dependencies via yarn", func() {
@@ -257,11 +257,11 @@ var _ = Describe("CF NodeJS Buildpack", func() {
 				Expect(app.GetBody("/")).To(ContainSubstring("Hello, World!"))
 			})
 
-			AssertUsesProxyDuringStagingIfPresent(filepath.Join(bpDir, "v2b_integration", "testdata", "with_yarn"))
+			AssertUsesProxyDuringStagingIfPresent(filepath.Join(bpDir, "integration", "testdata", "with_yarn"))
 		})
 		Context("with an app with an out of date yarn.lock", func() {
 			BeforeEach(func() {
-				app = cutlass.New(filepath.Join(bpDir, "v2b_integration", "testdata", "out_of_date_yarn_lock"))
+				app = cutlass.New(filepath.Join(bpDir, "integration", "testdata", "out_of_date_yarn_lock"))
 			})
 
 			It("warns that yarn.lock is out of date", func() {
@@ -271,7 +271,7 @@ var _ = Describe("CF NodeJS Buildpack", func() {
 		})
 		Context("with an app with pre and post scripts", func() {
 			BeforeEach(func() {
-				app = cutlass.New(filepath.Join(bpDir, "v2b_integration", "testdata", "pre_post_commands"))
+				app = cutlass.New(filepath.Join(bpDir, "integration", "testdata", "pre_post_commands"))
 			})
 
 			It("runs the scripts through npm run", func() {
@@ -289,7 +289,7 @@ var _ = Describe("CF NodeJS Buildpack", func() {
 
 	Describe("NODE_HOME and NODE_ENV", func() {
 		BeforeEach(func() {
-			app = cutlass.New(filepath.Join(bpDir, "v2b_integration", "testdata", "logenv"))
+			app = cutlass.New(filepath.Join(bpDir, "integration", "testdata", "logenv"))
 		})
 
 		It("sets the NODE_HOME to correct value", func() {
@@ -306,7 +306,7 @@ var _ = Describe("CF NodeJS Buildpack", func() {
 
 	Describe(".profile script", func() {
 		BeforeEach(func() {
-			app = cutlass.New(filepath.Join(bpDir, "v2b_integration", "testdata", "with_profile_script"))
+			app = cutlass.New(filepath.Join(bpDir, "integration", "testdata", "with_profile_script"))
 		})
 
 		It("runs .profile script when staging", func() {
@@ -326,7 +326,7 @@ var _ = Describe("CF NodeJS Buildpack", func() {
 
 	Describe("when setting env vars on the app", func() {
 		BeforeEach(func() {
-			app = cutlass.New(filepath.Join(bpDir, "v2b_integration", "testdata", "simple_app"))
+			app = cutlass.New(filepath.Join(bpDir, "integration", "testdata", "simple_app"))
 			app.SetEnv("APP_ENV_VAR", "SUPER SECRET SECRET")
 			PushAppAndConfirm(app)
 		})
@@ -365,7 +365,7 @@ var _ = Describe("CF NodeJS Buildpack", func() {
 			if cutlass.Cached {
 				Skip("unbuilt requires uncached buildpack")
 			}
-			app = cutlass.New(filepath.Join(bpDir, "v2b_integration", "testdata", "simple_app"))
+			app = cutlass.New(filepath.Join(bpDir, "integration", "testdata", "simple_app"))
 			bpName = fmt.Sprintf("unbuilt-nodejs-%s", cutlass.RandStringRunes(8))
 			app.Buildpacks = []string{bpName + "_buildpack"}
 			//cmd := exec.Command("git", "archive", "-o", filepath.Join("/tmp", bpName+".zip"), "HEAD")
@@ -393,7 +393,7 @@ var _ = Describe("CF NodeJS Buildpack", func() {
 
 	Describe("System CA Store", func() {
 		BeforeEach(func() {
-			app = cutlass.New(filepath.Join(bpDir, "v2b_integration", "testdata", "use-openssl-ca"))
+			app = cutlass.New(filepath.Join(bpDir, "integration", "testdata", "use-openssl-ca"))
 			app.SetEnv("SSL_CERT_FILE", "cert.pem")
 		})
 		It("uses the system CA store (or env)", func() {

@@ -20,7 +20,7 @@ var _ = Describe("CF NodeJS Buildpack", func() {
 
 	Context("deploying a Node.js app with a specified npm version ending with .x", func() {
 		BeforeEach(func() {
-			app = cutlass.New(filepath.Join(bpDir, "v2b_integration", "testdata", "npm_version_with_minor_x"))
+			app = cutlass.New(filepath.Join(bpDir, "integration", "testdata", "npm_version_with_minor_x"))
 		})
 
 		It("should not attempt to download npm because it should match existing version", func() {

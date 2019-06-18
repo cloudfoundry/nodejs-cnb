@@ -23,7 +23,7 @@ var _ = Describe("pushing an app a second time", func() {
 			Skip("running uncached tests")
 		}
 
-		app = cutlass.New(filepath.Join(bpDir, "v2b_integration", "testdata", "simple_app"))
+		app = cutlass.New(filepath.Join(bpDir, "integration", "testdata", "simple_app"))
 		app.Buildpacks = []string{"nodejs_buildpack"}
 	})
 

@@ -368,12 +368,8 @@ var _ = Describe("CF NodeJS Buildpack", func() {
 			app = cutlass.New(filepath.Join(bpDir, "integration", "testdata", "simple_app"))
 			bpName = fmt.Sprintf("unbuilt-nodejs-%s", cutlass.RandStringRunes(8))
 			app.Buildpacks = []string{bpName + "_buildpack"}
-			//cmd := exec.Command("git", "archive", "-o", filepath.Join("/tmp", bpName+".zip"), "HEAD")
-			stashCmd := exec.Command("git", "stash", "create")
-			out, err := stashCmd.CombinedOutput()
-			Expect(err).ToNot(HaveOccurred())
+			cmd := exec.Command("git", "archive", "-o", filepath.Join("/tmp", bpName+".zip"), "HEAD")
 
-			cmd := exec.Command("git", "archive", "-o", filepath.Join("/tmp", bpName+".zip"), strings.Trim(string(out), "\n"))
 			cmd.Dir = bpDir
 			Expect(cmd.Run()).To(Succeed())
 			Expect(cutlass.CreateOrUpdateBuildpack(bpName, filepath.Join("/tmp", bpName+".zip"), "")).To(Succeed())

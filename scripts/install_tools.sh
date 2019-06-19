@@ -15,5 +15,9 @@ fi
 if [ ! -f .bin/cnb2cf ]; then
     go install github.com/cloudfoundry/cnb2cf/cmd/cnb2cf
     ./scripts/build.sh
-    rm .bin/statik
+    if [ -f .bin/statik ]; then
+        rm .bin/statik
+    fi
 fi
+
+go mod tidy

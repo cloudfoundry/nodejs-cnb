@@ -1,8 +1,8 @@
-# Cloud Foundry Node.js Buildpack
+# Cloud Foundry Shimmed Node.js Buildpack
 
 [![CF Slack](https://www.google.com/s2/favicons?domain=www.slack.com) Join us on Slack](https://cloudfoundry.slack.com/messages/buildpacks/)
 
-A Cloud Foundry [buildpack](http://docs.cloudfoundry.org/buildpacks/) for Node based apps.
+A Cloud Foundry [buildpack](http://docs.cloudfoundry.org/buildpacks/) for Node based apps, composed of [Cloud Native Buildpacks](https://buildpacks.io/).
 
 ### Buildpack User Documentation
 
@@ -15,20 +15,26 @@ To build this buildpack, run the following commands from the buildpack's directo
 1. Source the .envrc file in the buildpack directory.
 
    ```bash
-   source .envrc
+   $ source .envrc
    ```
    To simplify the process in the future, install [direnv](https://direnv.net/) which will automatically source .envrc when you change directories.
 
-1. Install buildpack-packager
+1. Install Go, if it is not already installed
 
     ```bash
-    (cd src/nodejs/vendor/github.com/cloudfoundry/libbuildpack/packager/buildpack-packager && go install)
+    $ ./scripts/install_go.sh
     ```
 
-1. Build the buildpack
+1. Install the packaging tools
 
     ```bash
-    buildpack-packager build [ --cached=(true|false) ]
+    $ ./scripts/install_tools.sh
+    ```
+
+1. Build the buildpack, using [cnb2cf](https://github.com/cloudfoundry/cnb2cf#usage)
+
+    ```bash
+   $ cnb2cf package -stack <stack> [-cached] [-version <version>] [-cachedir <path to cachedir>]    
     ```
 
 1. Use in Cloud Foundry
@@ -36,8 +42,8 @@ To build this buildpack, run the following commands from the buildpack's directo
    Upload the buildpack to your Cloud Foundry and optionally specify it by name
 
     ```bash
-    cf create-buildpack [BUILDPACK_NAME] [BUILDPACK_ZIP_FILE_PATH] 1
-    cf push my_app [-b BUILDPACK_NAME]
+    $ cf create-buildpack [BUILDPACK_NAME] [BUILDPACK_ZIP_FILE_PATH] 1
+    $ cf push my_app [-b BUILDPACK_NAME]
     ```
 
 ### Testing
@@ -49,14 +55,14 @@ To test this buildpack, run the following command from the buildpack's directory
 1. Source the .envrc file in the buildpack directory.
 
    ```bash
-   source .envrc
+   $ source .envrc
    ```
    To simplify the process in the future, install [direnv](https://direnv.net/) which will automatically source .envrc when you change directories.
 
-1. Run unit tests
+1. Install Go, if it is not already installed
 
     ```bash
-    ./scripts/unit.sh
+    $ ./scripts/install_go.sh
     ```
 
 1. Run integration tests
@@ -64,14 +70,29 @@ To test this buildpack, run the following command from the buildpack's directory
    Buildpacks use the [Cutlass](https://github.com/cloudfoundry/libbuildpack/tree/master/cutlass) framework for running integration tests against Cloud Foundry. Before running the integration tests, you need to login to your Cloud Foundry using the [cf cli](https://github.com/cloudfoundry/cli):
    
     ```bash
-    cf login -a https://api.your-cf.com -u name@example.com -p pa55woRD
+    $ cf login -a https://api.your-cf.com -u name@example.com -p pa55woRD
     ```
     
-   Note that your user requires permissions to run `cf create-buildpack` and `cf update-buildpack`. To run the integration tests, run the following command from the buildpack's directory:
+   Note that your user requires permissions to run `cf create-buildpack` and `cf update-buildpack`. 
+   
+   To run the integration tests, run the following command from the buildpack's directory:
     
     ```bash
-    ./scripts/integration.sh
+    $ ./scripts/integration.sh
     ```
+
+### Modifying the `bin` Directory
+To modify the bin files (`compile`, `detect`, `finalize`, `release`, and `supply`), run
+```bash
+$ git update-index --no-skip-worktree bin/*
+```
+Then make your changes and commit them. 
+
+Afterwards, run 
+```bash
+$ git update-index --skip-worktree bin/*
+```
+again to lock those files (per [this](https://stackoverflow.com/a/39776107)).
 
 ### Contributing
 

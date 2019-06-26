@@ -37,7 +37,7 @@ dependencies:
   source_sha256: 9ae21e89079162ad7a4f43bf958e7f3af7f15494dabf561ba6b97672709f04e9
 - name: org.cloudfoundry.nodejs-compat
   version: 0.0.1
-  uri: https://github.com/cloudfoundry/nodejs-compat-cnb/releases/download/v0.0.1/nodejs-compat-cnb-0.0.1.tgz
+  uri: https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.nodejs-compat/org.cloudfoundry.nodejs-compat-0.0.1-any-stack-7af90755.tgz
   sha256: 7af90755ff31a29366c632c9613518aa96608cc33b8c9f5e5febd349992fa7fe
   cf_stacks:
   - cflinuxfs2

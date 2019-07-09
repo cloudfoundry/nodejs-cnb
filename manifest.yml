@@ -27,14 +27,14 @@ dependencies:
   source: https://github.com/buildpack/lifecycle/releases/download/v0.3.0/lifecycle-v0.3.0%2Blinux.x86-64.tgz
   source_sha256: b8fe16a2666387322df3cc6ee4ae010c75d0ab81c98625fe77f250fd9231095c
 - name: org.cloudfoundry.node-engine
-  version: 0.0.13
-  uri: https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.node-engine/org.cloudfoundry.node-engine-0.0.13-any-stack-e21ead11.tgz
-  sha256: e21ead11308907177d9bde62b1bd9cd5e04e7395e38f194f518b6df286e7ba91
+  version: 0.0.14
+  uri: https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.node-engine/org.cloudfoundry.node-engine-0.0.14-any-stack-5283e0b0.tgz
+  sha256: 5283e0b0ca157c17bdfc2528d5211ac3729bc884950870967b4e716b90d3adc1
   cf_stacks:
   - cflinuxfs2
   - cflinuxfs3
-  source: https://github.com/cloudfoundry/node-engine-cnb/archive/v0.0.13.tar.gz
-  source_sha256: 7b189f1fefa30825b8855ec277fc749ae8b748cec84b5055220d6d63cdff2fe8
+  source: https://github.com/cloudfoundry/node-engine-cnb/archive/v0.0.14.tar.gz
+  source_sha256: 51367521816845932eeea4edd25e3e25cdc1599c824feaf0181d2104307f7ded
 - name: org.cloudfoundry.nodejs-compat
   version: 0.0.1
   uri: https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.nodejs-compat/org.cloudfoundry.nodejs-compat-0.0.1-any-stack-7af90755.tgz

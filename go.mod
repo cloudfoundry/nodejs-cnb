@@ -1,12 +1,9 @@
-module github.com/cloudfoundry/nodejs-buildpack
+module github.com/cloudfoundry/nodejs-cnb
+
+go 1.12
 
 require (
-	github.com/cloudfoundry/libbuildpack v0.0.0-20190618191545-b7f732060e74
-	github.com/golang/mock v1.3.1 // indirect
-	github.com/golang/protobuf v1.3.1 // indirect
+	github.com/cloudfoundry/libbuildpack v0.0.0-20190801204824-9b81c4002c19
 	github.com/onsi/ginkgo v1.8.0
 	github.com/onsi/gomega v1.5.0
-	golang.org/x/net v0.0.0-20190424112056-4829fb13d2c6 // indirect
-	golang.org/x/sys v0.0.0-20190425145619-16072639606e // indirect
-	golang.org/x/text v0.3.1 // indirect
 )

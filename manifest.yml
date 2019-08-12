@@ -1,12 +1,8 @@
 ---
 language: nodejs
 include_files:
-- CHANGELOG
-- CONTRIBUTING.md
-- ISSUE_TEMPLATE
 - LICENSE
 - NOTICE
-- PULL_REQUEST_TEMPLATE
 - README.md
 - VERSION
 - bin/compile

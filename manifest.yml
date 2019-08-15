@@ -13,15 +13,24 @@ include_files:
 - order.toml
 - manifest.yml
 dependencies:
-- name: org.cloudfoundry.node-engine
-  version: 0.0.27
-  uri: https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.node-engine/org.cloudfoundry.node-engine-0.0.27-any-stack-19a50cbe.tgz
-  sha256: 19a50cbee9bab15a3269095c4f5da743b1e363761cffa7eda4434ebde0112e6b
+- name: lifecycle
+  version: 0.3.0
+  uri: https://buildpacks.cloudfoundry.org/dependencies/lifecycle/lifecycle-0.3.0-any-stack-b8fe16a2.tgz
+  sha256: b8fe16a2666387322df3cc6ee4ae010c75d0ab81c98625fe77f250fd9231095c
   cf_stacks:
   - cflinuxfs2
   - cflinuxfs3
-  source: https://github.com/cloudfoundry/node-engine-cnb/archive/v0.0.27.tar.gz
-  source_sha256: 87d056349dd39a3861ebe9cb81b918801be34fb7efcafdafd36d04c51b0a9645
+  source: https://github.com/buildpack/lifecycle/releases/download/v0.3.0/lifecycle-v0.3.0%2Blinux.x86-64.tgz
+  source_sha256: b8fe16a2666387322df3cc6ee4ae010c75d0ab81c98625fe77f250fd9231095c
+- name: org.cloudfoundry.node-engine
+  version: 0.0.28
+  uri: https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.node-engine/org.cloudfoundry.node-engine-0.0.28-any-stack-5afb7b07.tgz
+  sha256: 5afb7b07f54a9f85e263245dc1ff423c333630f2b2d0874ee062141a66951ed7
+  cf_stacks:
+  - cflinuxfs2
+  - cflinuxfs3
+  source: https://github.com/cloudfoundry/node-engine-cnb/archive/v0.0.28.tar.gz
+  source_sha256: 15fc95c4e099b666b90eec4e73882c5b4906108c1be0d2e2af9d4ff9f907c382
 - name: org.cloudfoundry.nodejs-compat
   version: 0.0.7
   uri: https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.nodejs-compat/org.cloudfoundry.nodejs-compat-0.0.7-any-stack-95a98769.tgz
@@ -49,14 +58,5 @@ dependencies:
   - cflinuxfs3
   source: https://github.com/cloudfoundry/yarn-cnb/archive/v0.0.18.tar.gz
   source_sha256: 53c157b76b2ec3ade5fda60b4802ebee093bf4387c487e378cbb3f995eed1972
-- name: lifecycle
-  version: 0.3.0
-  uri: https://buildpacks.cloudfoundry.org/dependencies/lifecycle/lifecycle-0.3.0-any-stack-b8fe16a2.tgz
-  sha256: b8fe16a2666387322df3cc6ee4ae010c75d0ab81c98625fe77f250fd9231095c
-  cf_stacks:
-    - cflinuxfs2
-    - cflinuxfs3
-  source: https://github.com/buildpack/lifecycle/releases/download/v0.3.0/lifecycle-v0.3.0%2Blinux.x86-64.tgz
-  source_sha256: b8fe16a2666387322df3cc6ee4ae010c75d0ab81c98625fe77f250fd9231095c
 pre_package: scripts/build.sh
 default_versions: []

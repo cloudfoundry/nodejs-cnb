@@ -5,16 +5,41 @@ id = "org.cloudfoundry.nodejs"
 name = "Node.js Buildpack"
 version = "{{.Version}}"
 
-[[order]]
-group = [
-  { id = "org.cloudfoundry.nodejs-compat", version = "0.0.12", optional = true },
-  { id = "org.cloudfoundry.node-engine", version = "0.0.43" },
-  { id = "org.cloudfoundry.yarn", version = "0.0.22" }
-]
+[[metadata.dependencies]]
+id = "org.cloudfoundry.node-engine"
+sha256 = "0e0578f4a8e965054685eaa6863cea9bc959120ec8327780dbe264ea6f80794f"
+source = "https://github.com/cloudfoundry/node-engine-cnb/archive/v0.0.46.tar.gz"
+source_sha256 = "7d727ae7852bb77cbb6cd490d0a2bd559d6d716a82d5d60b4e403cb766cc61de"
+stacks = ["org.cloudfoundry.stacks.cflinuxfs3","io.buildpacks.stacks.bionic"]
+uri = "https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.node-engine/org.cloudfoundry.node-engine-0.0.46-any-stack-0e0578f4.tgz"
+version = "0.0.46"
 
 [[order]]
-group = [
-  { id = "org.cloudfoundry.nodejs-compat", version = "0.0.12", optional = true },
-  { id = "org.cloudfoundry.node-engine", version = "0.0.43" },
-  { id = "org.cloudfoundry.npm", version = "0.0.27" }
-]
+
+[[order.group]]
+id = "org.cloudfoundry.nodejs-compat"
+optional = true
+version = "0.0.12"
+
+[[order.group]]
+id = "org.cloudfoundry.node-engine"
+version = "0.0.43"
+
+[[order.group]]
+id = "org.cloudfoundry.yarn"
+version = "0.0.22"
+
+[[order]]
+
+[[order.group]]
+id = "org.cloudfoundry.nodejs-compat"
+optional = true
+version = "0.0.12"
+
+[[order.group]]
+id = "org.cloudfoundry.node-engine"
+version = "0.0.43"
+
+[[order.group]]
+id = "org.cloudfoundry.npm"
+version = "0.0.27"

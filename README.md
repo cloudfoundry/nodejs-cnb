@@ -28,7 +28,7 @@ To build this buildpack, run the following commands from the buildpack's directo
 1. Install the packaging tools
 
     ```bash
-    $ ./scripts/install_tools.sh
+    $ ./scripts/install_shim_tools.sh
     ```
 
 1. Build the buildpack, using [cnb2cf](https://github.com/cloudfoundry/cnb2cf#usage)

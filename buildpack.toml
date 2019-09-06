@@ -5,6 +5,9 @@ id = "org.cloudfoundry.nodejs"
 name = "Node.js Buildpack"
 version = "{{.Version}}"
 
+[metadata]
+include_files = ["buildpack.toml"]
+
 [[metadata.dependencies]]
 id = "org.cloudfoundry.node-engine"
 sha256 = "0e0578f4a8e965054685eaa6863cea9bc959120ec8327780dbe264ea6f80794f"

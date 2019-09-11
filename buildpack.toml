@@ -6,6 +6,7 @@ name = "Node.js Buildpack"
 version = "{{.Version}}"
 
 [metadata]
+metabuildpack = true
 include_files = ["buildpack.toml"]
 
 [[metadata.dependencies]]

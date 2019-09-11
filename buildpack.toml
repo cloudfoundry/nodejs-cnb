@@ -27,6 +27,15 @@ uri = "https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.nodejs-
 version = "0.0.16"
 
 [[metadata.dependencies]]
+id = "org.cloudfoundry.npm"
+sha256 = "a223ff1aafebe6b2098b115b4b59e29aedf0063311ca8169f12c9c4940251d03"
+source = "https://github.com/cloudfoundry/npm-cnb/archive/v0.0.30.tar.gz"
+source_sha256 = "d0ade5663724bdfe21cb4ffef27aa21c5af2d44ffc4159018181d38be213a2cf"
+stacks = ["org.cloudfoundry.stacks.cflinuxfs3","io.buildpacks.stacks.bionic"]
+uri = "https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.npm/org.cloudfoundry.npm-0.0.30-any-stack-a223ff1a.tgz"
+version = "0.0.30"
+
+[[metadata.dependencies]]
 id = "org.cloudfoundry.yarn"
 sha256 = "9712c7cca53b89ea2fe6acac2292ad4c1fd1060fec6020141240c17d61d9f780"
 source = "https://github.com/cloudfoundry/yarn-cnb/archive/v0.0.25.tar.gz"
@@ -63,4 +72,4 @@ version = "0.0.47"
 
 [[order.group]]
 id = "org.cloudfoundry.npm"
-version = "0.0.27"
+version = "0.0.30"

@@ -1,11 +1,10 @@
 #!/usr/bin/env bash
-set -exuo pipefail
+set -euo pipefail
 
 cd "$( dirname "${BASH_SOURCE[0]}" )/.."
 
-rm bin/{detect,supply,finalize,release}
+target_os=${1:-linux}
 
-GOOS=linux go build -ldflags="-s -w" -o bin/detect github.com/cloudfoundry/libbuildpack/shims/cmd/detect
-GOOS=linux go build -ldflags="-s -w" -o bin/supply github.com/cloudfoundry/libbuildpack/shims/cmd/supply
-GOOS=linux go build -ldflags="-s -w" -o bin/finalize github.com/cloudfoundry/libbuildpack/shims/cmd/finalize
-GOOS=linux go build -ldflags="-s -w" -o bin/release github.com/cloudfoundry/libbuildpack/shims/cmd/release
+for b in $(ls cmd); do
+    GOOS="$target_os" go build -mod=vendor -ldflags="-s -w" -o "bin/$b" "cmd/$b/main.go"
+done

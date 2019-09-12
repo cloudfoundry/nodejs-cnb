@@ -7,7 +7,6 @@ version = "{{.Version}}"
 
 [metadata]
 include_files = ["buildpack.toml"]
-metabuildpack = true
 
 [[metadata.dependencies]]
 id = "org.cloudfoundry.node-engine"

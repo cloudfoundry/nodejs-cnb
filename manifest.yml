@@ -41,14 +41,14 @@ dependencies:
   source: https://github.com/cloudfoundry/nodejs-compat-cnb/archive/v0.0.19.tar.gz
   source_sha256: e0711075fe544459c53d5c21c7fb1a4d23a16289bbf13aa3391476bfffe479fa
 - name: org.cloudfoundry.npm
-  version: 0.0.30
-  uri: https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.npm/org.cloudfoundry.npm-0.0.30-any-stack-a223ff1a.tgz
-  sha256: a223ff1aafebe6b2098b115b4b59e29aedf0063311ca8169f12c9c4940251d03
+  version: 0.0.32
+  uri: https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.npm/org.cloudfoundry.npm-0.0.32-any-stack-7cf76246.tgz
+  sha256: 7cf7624621af8c5f0467cd95c990bc29fbb1a38d6e1847de7dcdf63668440b0b
   cf_stacks:
   - cflinuxfs2
   - cflinuxfs3
-  source: https://github.com/cloudfoundry/npm-cnb/archive/v0.0.30.tar.gz
-  source_sha256: d0ade5663724bdfe21cb4ffef27aa21c5af2d44ffc4159018181d38be213a2cf
+  source: https://github.com/cloudfoundry/npm-cnb/archive/v0.0.32.tar.gz
+  source_sha256: 804703b70699bc0be458a3c65fa320b8e20666ac48b0da5eb0dd6dd04135d9f9
 - name: org.cloudfoundry.yarn
   version: 0.0.28
   uri: https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.yarn/org.cloudfoundry.yarn-0.0.28-any-stack-20dfe8af.tgz

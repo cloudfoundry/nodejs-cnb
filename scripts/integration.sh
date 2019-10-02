@@ -13,7 +13,7 @@ source scripts/install_tools.sh "$PACK_VERSION"
 
 export CNB_BUILD_IMAGE=${CNB_BUILD_IMAGE:-cloudfoundry/build:full-cnb}
 export CNB_RUN_IMAGE=${CNB_RUN_IMAGE:-cloudfoundry/run:full-cnb}
-
+export CF_STACK=${CF_STACK:-"cflinuxfs3"}
 # Always pull latest images
 # Most helpful for local testing consistency with CI (which would already pull the latest)
 docker pull "$CNB_BUILD_IMAGE"

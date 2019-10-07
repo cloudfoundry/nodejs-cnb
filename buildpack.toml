@@ -28,12 +28,12 @@ version = "0.0.40"
 
 [[metadata.dependencies]]
 id = "org.cloudfoundry.yarn"
-sha256 = "afd7cab59bbc1fa67986d39497b019074d3a4ce83bc43b0add8ba2d326564726"
-source = "https://github.com/cloudfoundry/yarn-cnb/archive/v0.0.41.tar.gz"
-source_sha256 = "6a4437167ad9565a6de15a164d417575b17af33f35a94d478a0e82a28af34a31"
+sha256 = "3bcb5e2411f89e1fbceef88f2c7cd480952a066eaa92774c75ad674882c721f8"
+source = "https://github.com/cloudfoundry/yarn-cnb/archive/v0.0.42.tar.gz"
+source_sha256 = "c8eaa16f12ffc4fb7a49a709adcc10e06579ba3b8706014a58ca0398b14275e5"
 stacks = ["org.cloudfoundry.stacks.cflinuxfs3","io.buildpacks.stacks.bionic","org.cloudfoundry.stacks.tiny"]
-uri = "https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.yarn/org.cloudfoundry.yarn-0.0.41-any-stack-afd7cab5.tgz"
-version = "0.0.41"
+uri = "https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.yarn/org.cloudfoundry.yarn-0.0.42-any-stack-3bcb5e24.tgz"
+version = "0.0.42"
 
 [[order]]
 
@@ -43,7 +43,7 @@ version = "0.0.62"
 
 [[order.group]]
 id = "org.cloudfoundry.yarn"
-version = "0.0.41"
+version = "0.0.42"
 
 [[order]]
 

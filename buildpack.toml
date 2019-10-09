@@ -10,12 +10,12 @@ include_files = ["buildpack.toml"]
 
 [[metadata.dependencies]]
 id = "org.cloudfoundry.node-engine"
-sha256 = "3ab80997dd5a6a33658bfaabdcf531cc4e8fb45dd85a2167ef52668cc1e63135"
-source = "https://github.com/cloudfoundry/node-engine-cnb/archive/v0.0.65.tar.gz"
-source_sha256 = "5702b02f03c24285a856b519367749e5064a0db0bce3fa61a3d117d243cfa33e"
+sha256 = "4850f5e74f63820a477d5346974bece814125cbc581a2d473c5605a2bc0ffeda"
+source = "https://github.com/cloudfoundry/node-engine-cnb/archive/v0.0.66.tar.gz"
+source_sha256 = "25daddbab1937e78f7f75c58a86ff63865020a5156afa291e513e80c30ceefa3"
 stacks = ["org.cloudfoundry.stacks.cflinuxfs3","io.buildpacks.stacks.bionic","org.cloudfoundry.stacks.tiny"]
-uri = "https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.node-engine/org.cloudfoundry.node-engine-0.0.65-any-stack-3ab80997.tgz"
-version = "0.0.65"
+uri = "https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.node-engine/org.cloudfoundry.node-engine-0.0.66-any-stack-4850f5e7.tgz"
+version = "0.0.66"
 
 [[metadata.dependencies]]
 id = "org.cloudfoundry.npm"
@@ -39,7 +39,7 @@ version = "0.0.45"
 
 [[order.group]]
 id = "org.cloudfoundry.node-engine"
-version = "0.0.65"
+version = "0.0.66"
 
 [[order.group]]
 id = "org.cloudfoundry.yarn"
@@ -49,7 +49,7 @@ version = "0.0.45"
 
 [[order.group]]
 id = "org.cloudfoundry.node-engine"
-version = "0.0.65"
+version = "0.0.66"
 
 [[order.group]]
 id = "org.cloudfoundry.npm"

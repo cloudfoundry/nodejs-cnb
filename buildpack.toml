@@ -19,12 +19,12 @@ version = "0.0.73"
 
 [[metadata.dependencies]]
 id = "org.cloudfoundry.npm"
-sha256 = "6ddfc2cff3db401ea11e1d1b22e2cee2cfc70bd3d4f111cef3e7769f440aa364"
-source = "https://github.com/cloudfoundry/npm-cnb/archive/v0.0.44.tar.gz"
-source_sha256 = "ca89a412e7874d8ce2d59e1d76ed1e9de2eefb62b2a4f6dea3cf9c3d0a59b68d"
-stacks = ["org.cloudfoundry.stacks.cflinuxfs3","io.buildpacks.stacks.bionic","org.cloudfoundry.stacks.tiny"]
-uri = "https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.npm/org.cloudfoundry.npm-0.0.44-any-stack-6ddfc2cf.tgz"
-version = "0.0.44"
+sha256 = "f194a1998ea159529e5b925bdd5ecd7692fee1ea189cecd45913fcaddddf699f"
+source = "https://github.com/cloudfoundry/npm-cnb/archive/v0.0.45.tar.gz"
+source_sha256 = "29f14c48b09ef4138cda9280bb007b5af75c8f143464cb46183f2818d2b0e4d7"
+stacks = ["org.cloudfoundry.stacks.tiny","io.buildpacks.stacks.bionic","org.cloudfoundry.stacks.cflinuxfs3"]
+uri = "https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.npm/org.cloudfoundry.npm-0.0.45-any-stack-f194a199.tgz"
+version = "0.0.45"
 
 [[metadata.dependencies]]
 id = "org.cloudfoundry.yarn"
@@ -53,4 +53,4 @@ version = "0.0.73"
 
 [[order.group]]
 id = "org.cloudfoundry.npm"
-version = "0.0.44"
+version = "0.0.45"

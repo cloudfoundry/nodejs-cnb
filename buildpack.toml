@@ -37,12 +37,12 @@ version = "0.0.49"
 
 [[metadata.dependencies]]
 id = "org.cloudfoundry.yarn"
-sha256 = "8508b9f16d3bcfc54a0ad076350f962d2f71a3a9644d8d3e6a8b3635fcbe994c"
-source = "https://github.com/cloudfoundry/yarn-cnb/archive/v0.0.54.tar.gz"
-source_sha256 = "8be9a6e7c62f2c94adc93f48a74c1f12bbad3fad122fd762bd07b5160b3ca971"
+sha256 = "f7e511ccef126a7c20bca1986d41426ee5285c0e1b0770c1ab416b09c9a90032"
+source = "https://github.com/cloudfoundry/yarn-cnb/archive/v0.0.56.tar.gz"
+source_sha256 = "413e421a5608701b9e7c6beb5766953033a5a1b7618a086d43e69c797755118f"
 stacks = ["org.cloudfoundry.stacks.tiny","io.buildpacks.stacks.bionic","org.cloudfoundry.stacks.cflinuxfs3"]
-uri = "https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.yarn/org.cloudfoundry.yarn-0.0.54-any-stack-8508b9f1.tgz"
-version = "0.0.54"
+uri = "https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.yarn/org.cloudfoundry.yarn-0.0.56-any-stack-f7e511cc.tgz"
+version = "0.0.56"
 
 [[order]]
 
@@ -52,7 +52,7 @@ version = "0.0.81"
 
 [[order.group]]
 id = "org.cloudfoundry.yarn"
-version = "0.0.54"
+version = "0.0.56"
 
 [[order]]
 

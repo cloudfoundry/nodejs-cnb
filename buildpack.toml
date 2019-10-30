@@ -9,15 +9,6 @@ version = "{{.Version}}"
 include_files = ["buildpack.toml"]
 
 [[metadata.dependencies]]
-id = "lifecycle"
-sha256 = "fe37503098e964aa1a052abb50fecf2de3624c0049506e638c86dc5b4b7909e8"
-source = "https://github.com/buildpack/lifecycle/releases/download/v0.5.0/lifecycle-v0.5.0%2Blinux.x86-64.tgz"
-source_sha256 = "fe37503098e964aa1a052abb50fecf2de3624c0049506e638c86dc5b4b7909e8"
-stacks = ["org.cloudfoundry.stacks.tiny","io.buildpacks.stacks.bionic","org.cloudfoundry.stacks.cflinuxfs3"]
-uri = "https://buildpacks.cloudfoundry.org/dependencies/lifecycle/lifecycle-0.5.0-any-stack-fe375030.tgz"
-version = "0.5.0"
-
-[[metadata.dependencies]]
 id = "org.cloudfoundry.node-engine"
 sha256 = "14193e4fe00989c6be1465f9a3f002ba753918587c794562eade584e3c13b2f2"
 source = "https://github.com/cloudfoundry/node-engine-cnb/archive/v0.0.85.tar.gz"

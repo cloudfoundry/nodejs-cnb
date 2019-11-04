@@ -73,21 +73,21 @@ api = "0.2"
 
   [[metadata.dependencies]]
     id = "org.cloudfoundry.yarn"
-    sha256 = "96fd657f3cc160d4b85b19232a068aa5def89e00a2bb643eda821adad24226aa"
-    source = "https://github.com/cloudfoundry/yarn-cnb/archive/v0.0.62.tar.gz"
-    source_sha256 = "7eb2000bde7385204ff6f21ac7fdb7c9ac33d57386a533f1e00e890ca4cf7b56"
+    sha256 = "f4e6bf4b12b2e54c749c665165784c725cd10cba54741c1e63d479bebe19b560"
+    source = "https://github.com/cloudfoundry/yarn-cnb/archive/v0.0.63.tar.gz"
+    source_sha256 = "0b18e6d2cf844b783ce6ba67926f4db39230312a02e27ec95d3108f28e8143bc"
     stacks = ["io.buildpacks.stacks.bionic"]
-    uri = "https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.yarn/org.cloudfoundry.yarn-0.0.62-any-stack-96fd657f.tgz"
-    version = "0.0.62"
+    uri = "https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.yarn/org.cloudfoundry.yarn-0.0.63-any-stack-f4e6bf4b.tgz"
+    version = "0.0.63"
 
   [[metadata.dependencies]]
     id = "org.cloudfoundry.yarn"
-    sha256 = "96fd657f3cc160d4b85b19232a068aa5def89e00a2bb643eda821adad24226aa"
-    source = "https://github.com/cloudfoundry/yarn-cnb/archive/v0.0.62.tar.gz"
-    source_sha256 = "7eb2000bde7385204ff6f21ac7fdb7c9ac33d57386a533f1e00e890ca4cf7b56"
+    sha256 = "f4e6bf4b12b2e54c749c665165784c725cd10cba54741c1e63d479bebe19b560"
+    source = "https://github.com/cloudfoundry/yarn-cnb/archive/v0.0.63.tar.gz"
+    source_sha256 = "0b18e6d2cf844b783ce6ba67926f4db39230312a02e27ec95d3108f28e8143bc"
     stacks = ["org.cloudfoundry.stacks.cflinuxfs3"]
-    uri = "https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.yarn/org.cloudfoundry.yarn-0.0.62-any-stack-96fd657f.tgz"
-    version = "0.0.62"
+    uri = "https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.yarn/org.cloudfoundry.yarn-0.0.63-any-stack-f4e6bf4b.tgz"
+    version = "0.0.63"
 
 [[order]]
 
@@ -97,7 +97,7 @@ api = "0.2"
 
   [[order.group]]
     id = "org.cloudfoundry.yarn"
-    version = "0.0.62"
+    version = "0.0.63"
 
 [[order]]
 

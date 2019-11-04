@@ -13,27 +13,27 @@ API = "0.2"
     SHA256 = "f2951687b007617a8f9b3391ac9bd892f5fd37681d5aebecd946edeb7de9964e"
     Source = "https://github.com/cloudfoundry/node-engine-cnb/archive/v0.0.89.tar.gz"
     source_sha256 = "823b4d302349196633eede35830d87a422cd792f13417ca3cd66cfd744f30ce8"
-    Stacks = ["io.buildpacks.stacks.bionic"]
-    URI = "https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.node-engine/org.cloudfoundry.node-engine-0.0.89-any-stack-f2951687.tgz"
-    Version = "0.0.89"
-
-  [[Metadata.Dependencies]]
-    ID = "org.cloudfoundry.node-engine"
-    SHA256 = "f2951687b007617a8f9b3391ac9bd892f5fd37681d5aebecd946edeb7de9964e"
-    Source = "https://github.com/cloudfoundry/node-engine-cnb/archive/v0.0.89.tar.gz"
-    source_sha256 = "823b4d302349196633eede35830d87a422cd792f13417ca3cd66cfd744f30ce8"
-    Stacks = ["org.cloudfoundry.stacks.cflinuxfs3"]
-    URI = "https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.node-engine/org.cloudfoundry.node-engine-0.0.89-any-stack-f2951687.tgz"
-    Version = "0.0.89"
-
-  [[Metadata.Dependencies]]
-    ID = "org.cloudfoundry.node-engine"
-    SHA256 = "f2951687b007617a8f9b3391ac9bd892f5fd37681d5aebecd946edeb7de9964e"
-    Source = "https://github.com/cloudfoundry/node-engine-cnb/archive/v0.0.89.tar.gz"
-    source_sha256 = "823b4d302349196633eede35830d87a422cd792f13417ca3cd66cfd744f30ce8"
     Stacks = ["org.cloudfoundry.stacks.tiny"]
     URI = "https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.node-engine/org.cloudfoundry.node-engine-0.0.89-any-stack-f2951687.tgz"
     Version = "0.0.89"
+
+  [[Metadata.Dependencies]]
+    ID = "org.cloudfoundry.node-engine"
+    SHA256 = "c35349bb2b7e7b0bfc6bae987f3045712ae7ff36291a21443a902f87e1f7b6c9"
+    Source = "https://github.com/cloudfoundry/node-engine-cnb/archive/v0.0.90.tar.gz"
+    source_sha256 = "a42dfbc40cca2b5c4e16192dc0fd8e2b2cac46bec476304725eeb81b6cb44d81"
+    Stacks = ["io.buildpacks.stacks.bionic"]
+    URI = "https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.node-engine/org.cloudfoundry.node-engine-0.0.90-any-stack-c35349bb.tgz"
+    Version = "0.0.90"
+
+  [[Metadata.Dependencies]]
+    ID = "org.cloudfoundry.node-engine"
+    SHA256 = "c35349bb2b7e7b0bfc6bae987f3045712ae7ff36291a21443a902f87e1f7b6c9"
+    Source = "https://github.com/cloudfoundry/node-engine-cnb/archive/v0.0.90.tar.gz"
+    source_sha256 = "a42dfbc40cca2b5c4e16192dc0fd8e2b2cac46bec476304725eeb81b6cb44d81"
+    Stacks = ["org.cloudfoundry.stacks.cflinuxfs3"]
+    URI = "https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.node-engine/org.cloudfoundry.node-engine-0.0.90-any-stack-c35349bb.tgz"
+    Version = "0.0.90"
 
   [[Metadata.Dependencies]]
     ID = "org.cloudfoundry.npm"
@@ -93,7 +93,7 @@ API = "0.2"
 
   [[order.Group]]
     ID = "org.cloudfoundry.node-engine"
-    Version = "0.0.89"
+    Version = "0.0.90"
 
   [[order.Group]]
     ID = "org.cloudfoundry.yarn"
@@ -103,7 +103,7 @@ API = "0.2"
 
   [[order.Group]]
     ID = "org.cloudfoundry.node-engine"
-    Version = "0.0.89"
+    Version = "0.0.90"
 
   [[order.Group]]
     ID = "org.cloudfoundry.npm"

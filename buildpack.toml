@@ -19,21 +19,21 @@ api = "0.2"
 
   [[metadata.dependencies]]
     id = "org.cloudfoundry.node-engine"
-    sha256 = "30b645da3c0eb61604ab32b2b1b3b901ffdac99b279dab4cdd18d2af6f17f129"
-    source = "https://github.com/cloudfoundry/node-engine-cnb/archive/v0.0.94.tar.gz"
-    source_sha256 = "36da536af9a498dcd709a7ae01108e95ec427181c2ad1745512c041fcdceb488"
+    sha256 = "64a9235add9f4f57516f4e5229dec4bd6a8c1c6190c30ae8096aef8997e79971"
+    source = "https://github.com/cloudfoundry/node-engine-cnb/archive/v0.0.95.tar.gz"
+    source_sha256 = "bdb04a5bf0125ba1f20faff244a69f36ff06cca359c91983d23c7812fd929ffa"
     stacks = ["io.buildpacks.stacks.bionic"]
-    uri = "https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.node-engine/org.cloudfoundry.node-engine-0.0.94-any-stack-30b645da.tgz"
-    version = "0.0.94"
+    uri = "https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.node-engine/org.cloudfoundry.node-engine-0.0.95-any-stack-64a9235a.tgz"
+    version = "0.0.95"
 
   [[metadata.dependencies]]
     id = "org.cloudfoundry.node-engine"
-    sha256 = "30b645da3c0eb61604ab32b2b1b3b901ffdac99b279dab4cdd18d2af6f17f129"
-    source = "https://github.com/cloudfoundry/node-engine-cnb/archive/v0.0.94.tar.gz"
-    source_sha256 = "36da536af9a498dcd709a7ae01108e95ec427181c2ad1745512c041fcdceb488"
+    sha256 = "64a9235add9f4f57516f4e5229dec4bd6a8c1c6190c30ae8096aef8997e79971"
+    source = "https://github.com/cloudfoundry/node-engine-cnb/archive/v0.0.95.tar.gz"
+    source_sha256 = "bdb04a5bf0125ba1f20faff244a69f36ff06cca359c91983d23c7812fd929ffa"
     stacks = ["org.cloudfoundry.stacks.cflinuxfs3"]
-    uri = "https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.node-engine/org.cloudfoundry.node-engine-0.0.94-any-stack-30b645da.tgz"
-    version = "0.0.94"
+    uri = "https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.node-engine/org.cloudfoundry.node-engine-0.0.95-any-stack-64a9235a.tgz"
+    version = "0.0.95"
 
   [[metadata.dependencies]]
     id = "org.cloudfoundry.npm"
@@ -93,7 +93,7 @@ api = "0.2"
 
   [[order.group]]
     id = "org.cloudfoundry.node-engine"
-    version = "0.0.94"
+    version = "0.0.95"
 
   [[order.group]]
     id = "org.cloudfoundry.yarn"
@@ -103,7 +103,7 @@ api = "0.2"
 
   [[order.group]]
     id = "org.cloudfoundry.node-engine"
-    version = "0.0.94"
+    version = "0.0.95"
 
   [[order.group]]
     id = "org.cloudfoundry.npm"

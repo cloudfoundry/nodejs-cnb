@@ -46,21 +46,21 @@ api = "0.2"
 
   [[metadata.dependencies]]
     id = "org.cloudfoundry.npm"
-    sha256 = "7153c0dd44443c8db9cf1e3d77d394818b9f7c67eb5208561c22623fe2803a65"
-    source = "https://github.com/cloudfoundry/npm-cnb/archive/v0.0.60.tar.gz"
-    source_sha256 = "d4720453df60a41e9e46e4eabf093d856bdf3ce946b6f787bfdf771a45567c9c"
+    sha256 = "8b30984fcc7500fefb38556347f5cb9aa4a10a6b13419f9f295f76668b2416a7"
+    source = "https://github.com/cloudfoundry/npm-cnb/archive/v0.0.61.tar.gz"
+    source_sha256 = "4b51d10b15455826af51ce928c564e65e0edaf5d9f1095c1ac65d201d0b060c0"
     stacks = ["io.buildpacks.stacks.bionic"]
-    uri = "https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.npm/org.cloudfoundry.npm-0.0.60-any-stack-7153c0dd.tgz"
-    version = "0.0.60"
+    uri = "https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.npm/org.cloudfoundry.npm-0.0.61-any-stack-8b30984f.tgz"
+    version = "0.0.61"
 
   [[metadata.dependencies]]
     id = "org.cloudfoundry.npm"
-    sha256 = "7153c0dd44443c8db9cf1e3d77d394818b9f7c67eb5208561c22623fe2803a65"
-    source = "https://github.com/cloudfoundry/npm-cnb/archive/v0.0.60.tar.gz"
-    source_sha256 = "d4720453df60a41e9e46e4eabf093d856bdf3ce946b6f787bfdf771a45567c9c"
+    sha256 = "8b30984fcc7500fefb38556347f5cb9aa4a10a6b13419f9f295f76668b2416a7"
+    source = "https://github.com/cloudfoundry/npm-cnb/archive/v0.0.61.tar.gz"
+    source_sha256 = "4b51d10b15455826af51ce928c564e65e0edaf5d9f1095c1ac65d201d0b060c0"
     stacks = ["org.cloudfoundry.stacks.cflinuxfs3"]
-    uri = "https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.npm/org.cloudfoundry.npm-0.0.60-any-stack-7153c0dd.tgz"
-    version = "0.0.60"
+    uri = "https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.npm/org.cloudfoundry.npm-0.0.61-any-stack-8b30984f.tgz"
+    version = "0.0.61"
 
   [[metadata.dependencies]]
     id = "org.cloudfoundry.yarn"
@@ -107,4 +107,4 @@ api = "0.2"
 
   [[order.group]]
     id = "org.cloudfoundry.npm"
-    version = "0.0.60"
+    version = "0.0.61"

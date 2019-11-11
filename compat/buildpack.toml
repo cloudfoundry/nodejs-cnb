@@ -10,30 +10,30 @@ include_files = ["buildpack.toml"]
 
 [[metadata.dependencies]]
 id = "lifecycle"
-version = "0.4.0"
-uri = "https://buildpacks.cloudfoundry.org/dependencies/lifecycle/lifecycle-0.4.0-any-stack-fa6792ea.tgz"
-sha256 = "fa6792ea8c9e7fcad25d76f0bbdf6e494ffdab5e0eaaec4ba1d5fff40a9c600f"
-source = "https://github.com/buildpack/lifecycle/releases/download/v0.4.0/lifecycle-v0.4.0%2Blinux.x86-64.tgz"
-source_sha256 = "fa6792ea8c9e7fcad25d76f0bbdf6e494ffdab5e0eaaec4ba1d5fff40a9c600f"
+version = "0.5.0"
+uri = "https://buildpacks.cloudfoundry.org/dependencies/lifecycle/lifecycle-0.5.0-any-stack-fe375030.tgz"
+sha256 = "fe37503098e964aa1a052abb50fecf2de3624c0049506e638c86dc5b4b7909e8"
+source = "https://github.com/buildpack/lifecycle/archive/v0.5.0.tar.gz"
+source_sha256 = "96c50622096b252b596a33731785ae959992078eada660ae068d86607faee6a6"
 stacks = ["org.cloudfoundry.stacks.cflinuxfs3","org.cloudfoundry.stacks.cflinuxfs2"]
 
 [[metadata.dependencies]]
 id = "org.cloudfoundry.nodejs-compat"
-sha256 = "4adebcfdc495111b2e0702d7b5df373cf29d3bb0676ea24a1dfe7b50cff2c985"
-source = "https://github.com/cloudfoundry/nodejs-compat-cnb/archive/v0.0.25.tar.gz"
-source_sha256 = "b3ffc5a977cba3434da094e8273b9a1a6b4ee27ed7777e9abcbbe681cb7c0d3f"
+sha256 = "5451165ebffe9dc78f3831ab74598892863ec1d4be8e0a379b561b442ae06b40"
+source = "https://github.com/cloudfoundry/nodejs-compat-cnb/archive/v0.0.51.tar.gz"
+source_sha256 = "48f3b14780badbca6f92fcfb9081f868bd67864a0161ef836158618098dac4c8"
 stacks = ["org.cloudfoundry.stacks.cflinuxfs3","io.buildpacks.stacks.bionic"]
-uri = "https://github.com/cloudfoundry/nodejs-compat-cnb/releases/download/v0.0.25/nodejs-compat-cnb-0.0.25.tgz"
+uri = "https://github.com/cloudfoundry/nodejs-compat-cnb/releases/download/v0.0.51/nodejs-compat-cnb-0.0.51.tgz"
 version = "0.0.25"
 
 [[metadata.dependencies]]
 id = "org.cloudfoundry.nodejs"
-sha256 = "a5d53002f97f380b40dace0112c21f4b2b60ba382a0fb499ca7c74c2d8fc44e9"
-source = "https://github.com/cloudfoundry/nodejs-cnb/archive/v0.0.2-RC3.tar.gz"
-source_sha256 = "5e98b8d7350225f5c6d88fdfc600ceafc8ee10c54442ee9a87afcdf90666b683"
+sha256 = "b061f6f3df8bf4f1b060a60878adff82c0be0f2fa1ee9a51a1075f96ef81519e"
+source = "https://github.com/cloudfoundry/nodejs-cnb/archive/v0.0.4.tar.gz"
+source_sha256 = "c107069e6d59becf21a6870a37c4b8a281ea1d7a56d57bff6bbe27c953168977"
 stacks = ["org.cloudfoundry.stacks.cflinuxfs3","io.buildpacks.stacks.bionic"]
-uri = "https://github.com/cloudfoundry/nodejs-cnb/releases/download/v0.0.2/nodejs-cnb-compat-cflinuxfs3-v0.0.2.zip"
-version = "1.0.0"
+uri = "https://github.com/cloudfoundry/nodejs-cnb/releases/download/v0.0.4/nodejs-cnb-v0.0.4.tgz"
+version = "0.0.4"
 
 [[order]]
 
@@ -43,10 +43,10 @@ version = "0.0.25"
 
 [[order.group]]
 id = "org.cloudfoundry.nodejs"
-version = "1.0.0"
+version = "0.0.4"
 
 [[order]]
 
 [[order.group]]
 id = "org.cloudfoundry.nodejs"
-version = "1.0.0"
+version = "0.0.4"

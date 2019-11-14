@@ -104,7 +104,7 @@ Join the #buildpacks channel in our [Slack community](http://slack.cloudfoundry.
 
 ### Reporting Issues
 
-Open an issue on this project.
+[Open an issue](https://github.com/cloudfoundry/nodejs-cnb/issues/new) on this project.
 
 ### Active Development
 

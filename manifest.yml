@@ -46,12 +46,12 @@ dependencies:
   source: https://github.com/cloudfoundry/npm-cnb/archive/v0.0.70.tar.gz
   source_sha256: b24da0c7af4a782c484655f9c3366581e85ea6f037d53d429bfb5067104f1f03
 - name: org.cloudfoundry.yarn
-  version: 0.0.79
-  uri: https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.yarn/org.cloudfoundry.yarn-0.0.79-any-stack-9ff55f59.tgz
-  sha256: 9ff55f59c56e887f496b9380dd5bd325808d6d3ec0bf6f441f79ac5fbc23608c
+  version: 0.0.80
+  uri: https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.yarn/org.cloudfoundry.yarn-0.0.80-any-stack-361ea27f.tgz
+  sha256: 361ea27f30973673df3b18d039eb4579c75210310d8e14ebb81e861a86bb389d
   cf_stacks:
   - cflinuxfs3
-  source: https://github.com/cloudfoundry/yarn-cnb/archive/v0.0.79.tar.gz
-  source_sha256: edf8c14c1655d95ed083519c58bff7a78e4823cc31b230858d864afc4ab1d8ab
+  source: https://github.com/cloudfoundry/yarn-cnb/archive/v0.0.80.tar.gz
+  source_sha256: 17b047b234ae79cfcfbe7e752ac1dbd9c792eba6d7b7b2f8dfaae2ae241a08ac
 pre_package: scripts/build.sh
 default_versions: []

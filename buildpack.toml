@@ -18,6 +18,15 @@ api = "0.2"
     version = "0.0.124"
 
   [[metadata.dependencies]]
+    id = "org.cloudfoundry.nodejs-compat"
+    sha256 = "49a9ff6fd238a9f31ef02efe2a6233bca8775b262054b427ff9ee23e11215534"
+    source = "https://github.com/cloudfoundry/nodejs-compat-cnb/archive/v0.0.68.tar.gz"
+    source_sha256 = "5f3d63351a02074e6cf0ebb8678be4f72405f9c39b5d2d20bf07a7ca0c1375ad"
+    stacks = ["io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3"]
+    uri = "https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.nodejs-compat/org.cloudfoundry.nodejs-compat-0.0.68-any-stack-49a9ff6f.tgz"
+    version = "0.0.68"
+
+  [[metadata.dependencies]]
     id = "org.cloudfoundry.npm"
     sha256 = "9fbdc0c70892e6c1296629bf7783854dca16ba8f3427a23c3a81150bca169441"
     source = "https://github.com/cloudfoundry/npm-cnb/archive/v0.0.75.tar.gz"

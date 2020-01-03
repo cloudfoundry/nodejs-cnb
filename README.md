@@ -80,20 +80,6 @@ To test this buildpack, run the following command from the buildpack's directory
     ```bash
     $ ./scripts/integration.sh
     ```
-
-### Modifying the `bin` Directory
-To modify the bin files (`compile`, `detect`, `finalize`, `release`, and `supply`), run
-```bash
-$ git update-index --no-skip-worktree bin/*
-```
-Then make your changes and commit them. 
-
-Afterwards, run 
-```bash
-$ git update-index --skip-worktree bin/*
-```
-again to lock those files (per [this](https://stackoverflow.com/a/39776107)).
-
 ### Contributing
 
 Find our guidelines [here](./CONTRIBUTING.md).
@@ -109,7 +95,3 @@ Join the #buildpacks channel in our [Slack community](http://slack.cloudfoundry.
 ### Active Development
 
 The project backlog is on [Pivotal Tracker](https://www.pivotaltracker.com/projects/1042066).
-
-### Acknowledgements
-
-Inspired by the [Heroku buildpack](https://github.com/heroku/heroku-buildpack-nodejs).

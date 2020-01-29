@@ -9,6 +9,15 @@ api = "0.2"
   include_files = ["buildpack.toml"]
 
   [[metadata.dependencies]]
+    id = "lifecycle"
+    sha256 = "7517c8be041eacdc874fe952cde38110e5d221165eaa2f3811a463fbe76ac6c7"
+    source = "https://github.com/buildpacks/lifecycle/releases/download/v0.6.0/lifecycle-v0.6.0%2Blinux.x86-64.tgz"
+    source_sha256 = "7517c8be041eacdc874fe952cde38110e5d221165eaa2f3811a463fbe76ac6c7"
+    stacks = ["io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3"]
+    uri = "https://buildpacks.cloudfoundry.org/dependencies/lifecycle/lifecycle-0.6.0-any-stack-7517c8be.tgz"
+    version = "0.6.0"
+
+  [[metadata.dependencies]]
     id = "org.cloudfoundry.node-engine"
     sha256 = "b3861b6f7d1c851d029262637801689f81ab0e09de06a0c3903ce60104528a8c"
     source = "https://github.com/cloudfoundry/node-engine-cnb/archive/v0.0.144.tar.gz"

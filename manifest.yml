@@ -14,13 +14,13 @@ include_files:
 - manifest.yml
 dependencies:
 - name: lifecycle
-  version: 0.5.0
-  uri: https://buildpacks.cloudfoundry.org/dependencies/lifecycle/lifecycle-0.5.0-any-stack-fe375030.tgz
-  sha256: fe37503098e964aa1a052abb50fecf2de3624c0049506e638c86dc5b4b7909e8
+  version: 0.6.0
+  uri: https://buildpacks.cloudfoundry.org/dependencies/lifecycle/lifecycle-0.6.0-any-stack-7517c8be.tgz
+  sha256: 7517c8be041eacdc874fe952cde38110e5d221165eaa2f3811a463fbe76ac6c7
   cf_stacks:
   - cflinuxfs3
-  source: https://github.com/buildpack/lifecycle/releases/download/v0.5.0/lifecycle-v0.5.0%2Blinux.x86-64.tgz
-  source_sha256: fe37503098e964aa1a052abb50fecf2de3624c0049506e638c86dc5b4b7909e8
+  source: https://github.com/buildpacks/lifecycle/releases/download/v0.6.0/lifecycle-v0.6.0%2Blinux.x86-64.tgz
+  source_sha256: 7517c8be041eacdc874fe952cde38110e5d221165eaa2f3811a463fbe76ac6c7
 - name: org.cloudfoundry.node-engine
   version: 0.0.144
   uri: https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.node-engine/org.cloudfoundry.node-engine-0.0.144-any-stack-b3861b6f.tgz

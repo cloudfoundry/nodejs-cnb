@@ -1,4 +1,4 @@
-# Cloud Foundry Shimmed Node.js Buildpack
+# Cloud Foundry Node.js Buildpack v2
 
 [![CF Slack](https://www.google.com/s2/favicons?domain=www.slack.com) Join us on Slack](https://cloudfoundry.slack.com/messages/buildpacks/)
 
@@ -8,7 +8,7 @@ A Cloud Foundry [buildpack](http://docs.cloudfoundry.org/buildpacks/) for Node b
 
 Official buildpack documentation can be found at [node buildpack docs](http://docs.cloudfoundry.org/buildpacks/node/index.html).
 
-### Building the Buildpack
+### Building the Buildpack for Use in Cloud Foundry
 
 To build this buildpack, run the following commands from the buildpack's directory:
 

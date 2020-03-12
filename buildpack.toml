@@ -19,12 +19,12 @@ api = "0.2"
 
   [[metadata.dependencies]]
     id = "org.cloudfoundry.node-engine"
-    sha256 = "b4e10f0d301d9d7bbbf956b80a2bbaa214ec6fa29e5df7cfa956147e6dd6af58"
-    source = "https://github.com/cloudfoundry/node-engine-cnb/archive/v0.0.162.tar.gz"
-    source_sha256 = "f93023f7030497c534c4db175c43b8085f5c1eb788594499f26cf31fcc1cc7d3"
+    sha256 = "ad04708fc5b602a2c04f6f170195917a0ffe82fe3a5cd8b246f94f9301598037"
+    source = "https://github.com/cloudfoundry/node-engine-cnb/archive/v0.0.163.tar.gz"
+    source_sha256 = "65f38bcf8a95a641c88429917b174d649869d4ab8a6b35370ea6176e879e46f5"
     stacks = ["io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3"]
-    uri = "https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.node-engine/org.cloudfoundry.node-engine-0.0.162-any-stack-b4e10f0d.tgz"
-    version = "0.0.162"
+    uri = "https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.node-engine/org.cloudfoundry.node-engine-0.0.163-any-stack-ad04708f.tgz"
+    version = "0.0.163"
 
   [[metadata.dependencies]]
     id = "org.cloudfoundry.npm"
@@ -48,7 +48,7 @@ api = "0.2"
 
   [[order.group]]
     id = "org.cloudfoundry.node-engine"
-    version = "0.0.162"
+    version = "0.0.163"
 
   [[order.group]]
     id = "org.cloudfoundry.yarn-install"
@@ -58,7 +58,7 @@ api = "0.2"
 
   [[order.group]]
     id = "org.cloudfoundry.node-engine"
-    version = "0.0.162"
+    version = "0.0.163"
 
   [[order.group]]
     id = "org.cloudfoundry.npm"

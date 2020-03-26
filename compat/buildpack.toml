@@ -28,12 +28,12 @@ api = "0.2"
 
   [[metadata.dependencies]]
     id = "org.cloudfoundry.nodejs-compat"
-    sha256 = "ee9655b3ab62764e30a8f76cc51b8ea5c0461d7e157ca2038bc4a122bdc5c6c3"
-    source = "https://github.com/cloudfoundry/nodejs-compat-cnb/archive/v0.1.6.tar.gz"
-    source_sha256 = "dee9768586d9cbe2414dc2956b29c8bbe0cfb525902e7f69926a6fc4402e8fee"
+    sha256 = "8cd5cb8d003395a876351312c0bc74218dafc844549a47430ef0db2b74a9cd50"
+    source = "https://github.com/cloudfoundry/nodejs-compat-cnb/archive/v0.1.7.tar.gz"
+    source_sha256 = "7365e3449ff79462d5df71e78503e7aae42d383d925fa0468653a2b3a708d20d"
     stacks = ["io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3"]
-    uri = "https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.nodejs-compat/org.cloudfoundry.nodejs-compat_0.1.6_linux_noarch_any-stack_ee9655b3.tgz"
-    version = "0.1.6"
+    uri = "https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.nodejs-compat/org.cloudfoundry.nodejs-compat_0.1.7_linux_noarch_any-stack_8cd5cb8d.tgz"
+    version = "0.1.7"
 
   [[metadata.dependencies]]
     id = "org.cloudfoundry.npm"
@@ -57,7 +57,7 @@ api = "0.2"
 
   [[order.group]]
     id = "org.cloudfoundry.nodejs-compat"
-    version = "0.1.6"
+    version = "0.1.7"
     optional = true
 
   [[order.group]]
@@ -72,7 +72,7 @@ api = "0.2"
 
   [[order.group]]
     id = "org.cloudfoundry.nodejs-compat"
-    version = "0.1.6"
+    version = "0.1.7"
     optional = true
 
   [[order.group]]

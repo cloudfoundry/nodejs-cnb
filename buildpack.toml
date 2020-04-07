@@ -28,12 +28,12 @@ api = "0.2"
 
   [[metadata.dependencies]]
     id = "org.cloudfoundry.yarn-install"
-    sha256 = "d6dc674b41bd94a30b315fc48ce8652f3fd356c4719c4749b03c505bee6ca356"
-    source = "https://github.com/cloudfoundry/yarn-install-cnb/archive/v0.1.18.tar.gz"
-    source_sha256 = "d7f62b747f95d6dcf5f04ba3dfdd8d71dd2250f0e11d104a1da6c618a2f00b58"
+    sha256 = "8ef46e74d1c398fee2e144f73c39a19981f337e50baf1510ff608f69ec413fb6"
+    source = "https://github.com/cloudfoundry/yarn-install-cnb/archive/v0.1.19.tar.gz"
+    source_sha256 = "79bb1d7d972748bd8a96889adb4833c4b8fe8f842c8d6f8279a659e5c231bffd"
     stacks = ["io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3"]
-    uri = "https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.yarn-install/org.cloudfoundry.yarn-install_0.1.18_linux_noarch_any-stack_d6dc674b.tgz"
-    version = "0.1.18"
+    uri = "https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.yarn-install/org.cloudfoundry.yarn-install_0.1.19_linux_noarch_any-stack_8ef46e74.tgz"
+    version = "0.1.19"
 
 [[order]]
 
@@ -43,7 +43,7 @@ api = "0.2"
 
   [[order.group]]
     id = "org.cloudfoundry.yarn-install"
-    version = "0.1.18"
+    version = "0.1.19"
 
 [[order]]
 

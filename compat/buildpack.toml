@@ -18,6 +18,15 @@ api = "0.2"
     version = "0.7.2"
 
   [[metadata.dependencies]]
+    id = "org.cloudfoundry.nodejs-compat"
+    sha256 = "61fd2acfde0013a8a3c670ea333bc6ce07c505adb21890cd667592e4acf936d6"
+    source = "https://github.com/cloudfoundry/nodejs-compat-cnb/archive/v0.1.9.tar.gz"
+    source_sha256 = "ead042765455d55c676b7f92a214295497d8e28b53c6845119226060373c39b6"
+    stacks = ["io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3"]
+    uri = "https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.nodejs-compat/org.cloudfoundry.nodejs-compat_0.1.9_linux_noarch_any-stack_61fd2acf.tgz"
+    version = "0.1.9"
+
+  [[metadata.dependencies]]
     id = "paketo-buildpacks/node-engine"
     sha256 = "ae92b009fb167ed56cf19e5050480606ca7e17dda977e73225f4d1e43d03956e"
     source = "https://github.com/cloudfoundry/node-engine-cnb/archive/v0.0.178.tar.gz"
@@ -25,15 +34,6 @@ api = "0.2"
     stacks = ["io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3"]
     uri = "https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.node-engine/org.cloudfoundry.node-engine_0.0.178_linux_noarch_any-stack_ae92b009.tgz"
     version = "0.0.178"
-
-  [[metadata.dependencies]]
-    id = "org.cloudfoundry.nodejs-compat"
-    sha256 = "1d22c215caeff731817c1b382f42e3577cb86a3014b738207ad99a1bcfbd85b4"
-    source = "https://github.com/cloudfoundry/nodejs-compat-cnb/archive/v0.1.8.tar.gz"
-    source_sha256 = "2faba183ee881502c7a8aaea70384fb5f8aabe8ee81199d592b59409102a00af"
-    stacks = ["io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3"]
-    uri = "https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.nodejs-compat/org.cloudfoundry.nodejs-compat_0.1.8_linux_noarch_any-stack_1d22c215.tgz"
-    version = "0.1.8"
 
   [[metadata.dependencies]]
     id = "paketo-buildpacks/npm"
@@ -57,7 +57,7 @@ api = "0.2"
 
   [[order.group]]
     id = "org.cloudfoundry.nodejs-compat"
-    version = "0.1.8"
+    version = "0.1.9"
     optional = true
 
   [[order.group]]
@@ -72,7 +72,7 @@ api = "0.2"
 
   [[order.group]]
     id = "org.cloudfoundry.nodejs-compat"
-    version = "0.1.8"
+    version = "0.1.9"
     optional = true
 
   [[order.group]]

@@ -9,7 +9,7 @@ api = "0.2"
   include_files = ["buildpack.toml"]
 
   [[metadata.dependencies]]
-    id = "org.cloudfoundry.node-engine"
+    id = "paketo-buildpacks/node-engine"
     sha256 = "ae92b009fb167ed56cf19e5050480606ca7e17dda977e73225f4d1e43d03956e"
     source = "https://github.com/cloudfoundry/node-engine-cnb/archive/v0.0.178.tar.gz"
     source_sha256 = "9b6f8dd2f03d5ee704605bbca4503d973d08a7ed236712c66de5c7a71867af46"
@@ -18,7 +18,7 @@ api = "0.2"
     version = "0.0.178"
 
   [[metadata.dependencies]]
-    id = "org.cloudfoundry.npm"
+    id = "paketo-buildpacks/npm"
     sha256 = "e2e146222809c2c8f4eccc7d61835909c6aa3ebdbe669a582b9694eef0605415"
     source = "https://github.com/cloudfoundry/npm-cnb/archive/v0.1.11.tar.gz"
     source_sha256 = "6b1deaad4fa30104b21816f4f86da46c523ae56e795fa986707c08bc9194d4da"
@@ -27,7 +27,7 @@ api = "0.2"
     version = "0.1.11"
 
   [[metadata.dependencies]]
-    id = "org.cloudfoundry.yarn-install"
+    id = "paketo-buildpacks/yarn-install"
     sha256 = "8ef46e74d1c398fee2e144f73c39a19981f337e50baf1510ff608f69ec413fb6"
     source = "https://github.com/cloudfoundry/yarn-install-cnb/archive/v0.1.19.tar.gz"
     source_sha256 = "79bb1d7d972748bd8a96889adb4833c4b8fe8f842c8d6f8279a659e5c231bffd"
@@ -38,19 +38,19 @@ api = "0.2"
 [[order]]
 
   [[order.group]]
-    id = "org.cloudfoundry.node-engine"
+    id = "paketo-buildpacks/node-engine"
     version = "0.0.178"
 
   [[order.group]]
-    id = "org.cloudfoundry.yarn-install"
+    id = "paketo-buildpacks/yarn-install"
     version = "0.1.19"
 
 [[order]]
 
   [[order.group]]
-    id = "org.cloudfoundry.node-engine"
+    id = "paketo-buildpacks/node-engine"
     version = "0.0.178"
 
   [[order.group]]
-    id = "org.cloudfoundry.npm"
+    id = "paketo-buildpacks/npm"
     version = "0.1.11"

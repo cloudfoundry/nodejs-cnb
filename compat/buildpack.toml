@@ -19,12 +19,12 @@ api = "0.2"
 
   [[metadata.dependencies]]
     id = "org.cloudfoundry.nodejs-compat"
-    sha256 = "61fd2acfde0013a8a3c670ea333bc6ce07c505adb21890cd667592e4acf936d6"
-    source = "https://github.com/cloudfoundry/nodejs-compat-cnb/archive/v0.1.9.tar.gz"
-    source_sha256 = "ead042765455d55c676b7f92a214295497d8e28b53c6845119226060373c39b6"
+    sha256 = "58365e3bc88cb5a1339a06a551d8b8909e3275d907ba2e6cc1e316aa7f520c33"
+    source = "https://github.com/cloudfoundry/nodejs-compat-cnb/archive/v0.1.10.tar.gz"
+    source_sha256 = "42902fba5f39369d4f57cb85168ea3aa29b23873f2b6c2bf379d41d5e69d702c"
     stacks = ["io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3"]
-    uri = "https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.nodejs-compat/org.cloudfoundry.nodejs-compat_0.1.9_linux_noarch_any-stack_61fd2acf.tgz"
-    version = "0.1.9"
+    uri = "https://buildpacks.cloudfoundry.org/dependencies/org.cloudfoundry.nodejs-compat/org.cloudfoundry.nodejs-compat_0.1.10_linux_noarch_any-stack_58365e3b.tgz"
+    version = "0.1.10"
 
   [[metadata.dependencies]]
     id = "paketo-buildpacks/node-engine"
@@ -57,7 +57,7 @@ api = "0.2"
 
   [[order.group]]
     id = "org.cloudfoundry.nodejs-compat"
-    version = "0.1.9"
+    version = "0.1.10"
     optional = true
 
   [[order.group]]
@@ -72,7 +72,7 @@ api = "0.2"
 
   [[order.group]]
     id = "org.cloudfoundry.nodejs-compat"
-    version = "0.1.9"
+    version = "0.1.10"
     optional = true
 
   [[order.group]]

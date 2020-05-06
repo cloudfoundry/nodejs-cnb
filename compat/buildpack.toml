@@ -10,12 +10,12 @@ api = "0.2"
 
   [[metadata.dependencies]]
     id = "lifecycle"
-    sha256 = "5abc450423b9a13cf3e8f83623d30cd61081af293e85044a8d6d88e29548cc66"
-    source = "https://github.com/buildpacks/lifecycle/releases/download/v0.7.2/lifecycle-v0.7.2%2Blinux.x86-64.tgz"
-    source_sha256 = "5abc450423b9a13cf3e8f83623d30cd61081af293e85044a8d6d88e29548cc66"
+    sha256 = "2edad797ac42d96815a0663e9063ce08a999197d815f68cb3ed07d6dc3c87611"
+    source = "https://github.com/buildpacks/lifecycle/releases/download/v0.7.4/lifecycle-v0.7.4%2Blinux.x86-64.tgz"
+    source_sha256 = "2edad797ac42d96815a0663e9063ce08a999197d815f68cb3ed07d6dc3c87611"
     stacks = ["io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3"]
-    uri = "https://buildpacks.cloudfoundry.org/dependencies/lifecycle/lifecycle-0.7.2-any-stack-5abc4504.tgz"
-    version = "0.7.2"
+    uri = "https://buildpacks.cloudfoundry.org/dependencies/lifecycle/lifecycle_0.7.4_linux_noarch_any-stack_2edad797.tgz"
+    version = "0.7.4"
 
   [[metadata.dependencies]]
     id = "org.cloudfoundry.nodejs-compat"
